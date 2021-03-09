@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.corpo-pagina{
+    height: 66vh;
+
+}
+.redes-sociais{
+    display: block;
+    width: ;
+    background-color: gray;
+    text-align: center;
+    margin-bottom: 0;
+}
+.titulo-pagina{
+    background-color: goldenrod;
+    padding: 20px;
+    color:midnightblue;
+}
+body{
+    background-color: midnightblue;
+    height: 100vh;
+}
+.links-pagina{
+    background-color:gray;
+    padding: 10px;
+    
+}
+.conteudo-pagina{
+    margin: 30px;
+    background-color: silver;
+    height: 57vh;
+    padding: 30px;
+}
+h1.titulo-pagina{
+    padding-bottom: 2px;
+}
+p.titulo-pagina{
+    padding-top: 2px;
+}
+a{
+    color:whitesmoke;
+}
+.icones-redes-sociais{
+    display: inline-block;
+    padding-left: auto;
+    padding-right: auto;
+    margin:8px;
+    }
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+.foto-shisha{
+    display: block;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#estoque-produtos{
+    height:auto;
+    width: auto;
+    margin:8px;
+}
+.mensagem-redes{
+    color: darkgoldenrod;
+    text-align: center;
+}
