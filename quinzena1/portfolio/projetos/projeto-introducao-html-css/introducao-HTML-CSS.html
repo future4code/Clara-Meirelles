@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Blog</title>
+
+        <!-- descobrir por que a cor cinza de textos não aparece  -->
+    
+        <link rel="stylesheet" type="text/css" href="introducao-HTML-CSS.css" media="screen" />
+
+    
+    </head>
+    <body>
+        <div>
+            <!--ARRUMAR OS LINKS PRA IREM PROS ENDEREÇOS CORRETAMENTE-->
+            
+            <a href="portfolio/portfolio-clara-meirelles.html">Página Inicial</a>
+            <a href="sobre-mim.html">Sobre mim</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="contato.html">Contato</a>
+    
+        </div>
+        <h1>Resumo Aulas Khan Academy HTML/CSS</h1>
+        <h4>Conteúdo retirado da Khan Academy</h4>
+        <p>A ideia de fazer este resumo surgiu do "Projeto: Blog", onde uma das sugestões era criar um blog para documentar o aprendizado obtido na <a href="https://pt.khanacademy.org/"> Khan Academy</a>. Assim, decidi "passar a limpo" minhas anotações deste curso e treinar o que aprendi neste documento. A ideia é seguir atualizando ele conforme as aulas que faço.</p>
+        <p>Para acessar as aulas descritas, no início de cada capítulo coloquei o link da respectiva aula.</p>
+        <h2><a id="indice">Índice:</a></h2>
+    <!-- Índice do resumo-->
+        <table>
+        <thead>
+            <tr>
+            <th>Introdução a HTML</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td> <a href="#fundamentos-de-HTML">Fundamentos de HTML</a></td>
+        </tr>
+        <tr><td><a href="#enfase-de-texto">HTML: Ênfase de Texto</a></td></tr>
+        <tr><td><a href="#html-listas">HTML: Listas</a></td></tr>
+        <tr><td><a href="#html-imagens">HTML: Imagens</a></td></tr>
+        <tr><td><a href="#introdução-css">Introdução a CSS</a></td></tr>
+        </tbody>
+            <thead>
+                <tr>
+                    <th>Introdução a CSS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#css-selecao-id">CSS: Seleção por id</a></td>  
+                </tr>
+                <tr>
+                   <td><a href="#css-selecao-classe">CSS: Seleção por classe</a></td> 
+                </tr>
+                <thead>
+            <tr>
+            <th>Mais tags HTML</th>
+            </tr>
+        </thead>
+                <tr>
+                    <td><a href="#html-links"></a>HTML: Links</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#html-links-internos">Links internos HTML</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#html-tabelas">Tabelas HTML</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#html-comentarios">Comentários HTML</a></td>
+                </tr>
+                <tr>
+                <thead>
+            <tr>
+            <th>Propriedades de Texto CSS</th>
+            </tr>
+        </thead>
+                    <td><a href="#css-propriedades-de-texto">CSS: Propriedades de Texto</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#css-heranca">Herança CSS</a></td>
+                </tr>
+            </tbody>
+        </table>
+            
+
+        
+    <!-- Início do conteúdo
+    Fundamentos de HTML-->
+        <h2><a id="fundamentos-de-HTML">Fundamentos de HTML</a></h2>
+        <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/intro-to-html/pt/html-basics"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+        <p>Documentos HTML(Hypertext Markup Language, ou “Linguagem de Marcação em Hipertexto”) são escritos por tags, que são cada conteúdo dentro dos "&lt&gt".</p>
+        <p>A aula inicia com a visualização de uma página web em branco que será construída no decorrer do curso. Para isso nos são apresentados algumas propriedades do esqueleto da página:<br></p>
+    <p class="itens-html">&lt!DOCTYPE html&gt:</p>
+    <p>Identifica para o navegador que a página está escrita no novo formato HTML.</p>
+    <p class="itens-html">&lthtml&gt e &lt/html&gt:</p>
+    <p>Respectivamente: abre e fecha o documento HTML. Dentro desta tag ficará toda a programação da página. </p>
+    <p class="itens-html"> &lthead&gt e &lt/head&gt:</p>
+    <p>Ficam dentro desta tag as instruções para que o navegador leia a página. Como as cores e tipo de letras usadas no documento.</p>
+    <p class="itens-html"> &ltmeta charset="utf-8"&gt:</p>
+    <p>Localizada dentro da tag &lthead&gt, a tag &ltmeta charset=""&gt identifica qual o conjunto de caracteres será usado na codificação deste documento, enquanto a propriedade "utf-8" diz ao navegador que serão os caracteres mais simples, como os presentes na língua inglesa.</p>
+    <p class="itens-html"> &lttitle&gt e &lt/title&gt:</p>
+    <p>Define o título da página no navegador.</p>
+    <p class="itens-html"> &ltbody&gt e &lt/body&gt:</p>
+    <p>Esta é a seção visível do site para o usuário. Dentro dela fica todo o conteúdo visível como títulos, textos, imagens, links, etc. Ou seja, tudo o que se pode ver nesta página está dentro desta tag.</p>
+    <p class="itens-html"> &lth1&gt e &lt/h1&gt:</p>
+    <p>Esta tag define os títulos e seus tamanhos. Indo do &lth1&gt, que é o maior título e diminuindo até o &lth6&gt, menor título. Exemplos:</p>
+    
+<h1 class="exemplo-titulos">&lth1&gt &lt/h1&gt</h1>
+<h2 class="exemplo-titulos">&lth2&gt &lt/h2&gt</h2>
+<h3 class="exemplo-titulos">&lth3&gt &lt/h3&gt</h3>
+<h4 class="exemplo-titulos">&lth4&gt &lt/h4&gt</h4>
+<h5 class="exemplo-titulos">&lth5&gt &lt/h5&gt</h5>
+<h6 class="exemplo-titulos">&lth6&gt &lt/h6&gt</h6>
+    <p class="itens-html"> &ltp&gt e &lt/p&gt:</p>
+    <p>Dentro desta tag ficam os parágrafos simples do documento.</p>
+    <p class="itens-html"> &ltbr&gt:</p>
+    <p>O navegador não processa as quebras de linhas digitadas no campo de programação, então para que haja a quebra, precisa-se usar esta tag no final da linha, para que haja quebra. Exemplo:<br>
+    <strong>Na codificação:</strong><br> &ltp&gt Para que aconteça esta quebra, &ltbr&gt precisa-se deste símbolo &ltbr&gt para o navegador processá-la &lt/p&gt <br>
+    <strong>Na visualização:</strong><br>
+    Para que aconteça esta quebra, <br> precisa-se deste símbolo <br> para o navegador processá-la
+    </p>
+    
+    <!-- Ênfase de texto-->
+    <h2><a id="enfase-de-texto">HTML: Ênfase de Texto</a></h2>
+        <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/intro-to-html/pt/html-text-emphasis"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+        <p>A ênfase serve para realçar partes do texto, por exemplo colocando um trecho do seu texto em <em>itálico</em> ou em <strong>negrito</strong>. Para isso usa-se as seguintes tags:</p>
+        <p class="itens-html"> &ltem&gt e &lt/em&gt:</p>
+    <p>&ltem&gt<em>Esta tag serve para deixar o trecho do texto em itálico.</em>&lt/em&gt</p>
+    <p class="itens-html"> &ltstrong&gt e &lt/strong&gt:</p>
+    <p>&ltstrong&gt<strong>Esta tag serve para deixar o trecho do texto em itálico.</strong>&lt/strong&gt</p>
+    <!-- Listas-->
+ <h2><a id="html-listas">HTML: Listas</a></h2>
+ <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/intro-to-html/pt/html-lists"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+  <p>Existem dois tipos de lista dentro do HTML: Listas ordenadas, com os itens iniciados por números e listas não ordenadas, com os itens iniciados com símbolos.</p>
+    <p class="itens-html">&ltul&gt e &lt/ul&gt:</p>
+    <p>Lista não numerada.</p>
+    <p class="itens-html">&ltol&gt e &lt/ol&gt:</p>
+    <p>Lista numerada. Obs: ao trocar a ordem de qualquer item da lista, ela automaticamente reordena o número inicial.</p>
+    <p class="itens-html">&ltli&gt e &lt/li&gt:</p>
+    <p>Cada item da lista deve ficar nesta tag.</p>
+    <p>Exemplos de listas:</p>
+    <p>&ltol&gt Lista Ordenada:<br>&ltli&gt 1º item da lista &lt/li&gt <br>&ltli&gt 2º item da lista &lt/li&gt<br>&lt/ol&gt</p>
+    <ol> Lista Ordenada:
+<li> 1º item da lista </li>
+<li> 2º item da lista </li>
+</ol><p> .</p>
+    <p>&ltul&gt Lista Não Ordenada:<br>&ltli&gt 1º item da lista &lt/li&gt <br>&ltli&gt 2º item da lista &lt/li&gt<br>&lt/ul&gt</p>
+<ul> Lista Não Ordenada:
+<li> 1º item da lista </li>
+<li> 2º item da lista </li>
+</ul>
+
+    <!-- Inserção de imagens -->
+ <h2><a id="html-imagens">HTML: Imagens</a></h2>
+ <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/intro-to-html/pt/html-images"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+ <p>Para adicionar uma imagem ao seu documento HTML você vai precisar da url desta imagem.</p>
+     <p class="itens-html"> &ltimg src="url da imagem desejada"&gt :</p>
+    <p>Insira dentro desta tag, entre as áspas, o endereço da imagem desejada. <br> Exemplo:</p>
+    <p><strong>Código:</strong><br>&ltimg src="https://c.pxhere.com/photos/98/63/dog_black_puppy_cute_happy_young_doggy_fun-552464.jpg!d"&gt<br>
+        <strong>Visualização:</strong>
+        </p>
+<img src="https://c.pxhere.com/photos/98/63/dog_black_puppy_cute_happy_young_doggy_fun-552464.jpg!d" alt= "Cão preto muito feliz na grama." widht = "200">
+<p>Imagem retirada de: https://pxhere.com/</p>
+<p class="itens-html"> &ltimg src="url da imagem desejada" <em>alt = "Descrição da imagem"&gt :</em></p>
+<p>O atributo alt= permite que se descreva a imagem inserida para o caso de ela não estar mais disponível na hora de acesso ou mesmo para os aplicativos de leitura automáticos de texto, comumente usados pela população cega, aumentando a acessibilidade da página.</p>
+<p class="itens-html"> &ltimg src="url da imagem desejada"<em> width="largura desejada para a imagem" height="altura desejada para a imagem" </em>&gt :</p>
+<p>Os atributos "width" e "height" permitem, respectivamente, que você escolha a altura e largura da sua imagem. Porém quando informa-se apenas um deles, o computador calcula automaticamente o outro atributo, de forma proporcional, evitando assim que a imagem fique distorcida.</p>
+<p><strong>Código:</strong><br><br>Usando os dois atributos:<br>
+&ltimg src="https://www.kasandbox.org/programming-images/animals/rabbit.png" width="300" height= "100"&gt
+<p><strong>Visualização:</strong></p>
+</p>
+<img src="https://www.kasandbox.org/programming-images/animals/rabbit.png" alt="Coelho com as orelhas baixas, imagem distorcida pela proporção errada." width="200" height= "100">
+<p><strong>Código:</strong><br><br>Usando apenas um dos atributos:<br>
+&ltimg src="https://www.kasandbox.org/programming-images/animals/rabbit.png" width="300"&gt<br></p>
+<p><strong>Visualização:</strong>
+</p>
+<img src="https://www.kasandbox.org/programming-images/animals/rabbit.png" alt="Coelho com as orelhas baixas, imagem sem distorção." width="300">
+
+<!-- Introdução a CSS -->
+<h2><a id="introdução-css">Introdução a CSS</a></h2>
+<h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/intro-to-css/pt/css-basics"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+        <p>CSS é usado no HTML para a estilização da página.<br>
+            <strong>*</strong> Qualquer elemento do HTML pode ser selecionado com o CSS, basta utilizá-los <u>sem</u> os "&lt &gt"
+        </p>
+        <p class="itens-html"> &ltstyle&gt e &lt/style&gt:</p>
+    <p>Esta tag fica dentro da tag &lthead&gt e nela serão colocados os itens de estilização da página, como cores de títulos, subtítulos, parágrafos ou fundo.</p>
+    <p>Exemplo:<br>
+    Para mudar a cor de todos os títulos h1 do seu documento:<br>
+    &lthead&gt<br>
+    &ltstyle&gt<br>
+    h1{<br>
+    color:red;<br>
+    }<br>
+    &lt/style&gt<br>
+    &lt/head&gt
+    </p>
+    <p>Assim todos os títulos h1 estarão na cor selecionada, a menos que haja alguma regra específica. O mesmo vale para parágrafos, tabelas, listas, etc.</p>
+    <p>As cores usadas em CSS são em RGB ("red, green, blue", ou "vermelho, verde e azul". Pode-se usar os comandos "red", "orange", "green", etc., mas, para cores mais específicas, usar:<br>
+    color: rgb(255, 0, 0); (esta proporção resulta em vermelho).</p>
+    <!-- Seleção por id-->
+    <h2><a id="css-selecao-id">CSS: Seleção por id</a></h2>
+    <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/intro-to-css/pt/css-selecting-by-id"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+    <p>Seleciona uma única tag.<br>
+        O identificador deve ser único, cuidando para que não se repita em outro item, pois isso confundirá o comando dado ao computador.</p>
+        <p>Exemplo:<br><br>
+        &ltbody&gt<br>
+        &ltp <strong class="itens-html">id="identificador-do-paragrafo"</strong>&gt Texto do parágrafo seleção por id.
+        &lt/p&gt<br>
+        &lt/body&gt<br></p>
+        <p>Cria na tag body um id para este parágrafo, então pode selecioná-lo na tag style da seguinte forma:<br></p>
+    <p>&ltstyle&gt<br>
+    <strong class="itens-html"> #identificador-do-paragrafo{<br>
+    background-color: yellow;<br>
+    }</strong><br>
+    &lt/style&gt<br></p>
+    <p>Visualização:<p>
+    <p id="identificador-do-paragrafo"> Texto do parágrafo seleção por id. </p>
+    
+    <p> Neste exemplo a cor de fundo do páragrafo identificado como "identificador-do-paragrafo" para a cor amarela.</p>
+    <ul>Notas:
+    <li>Para chamar o id, <u>sempre</u> usar "<strong>#</strong>".</li>
+    <li>O id sempre deve começar com uma letra e somente pode ter caracteres comuns (sem acentos) e "-" ou "_".</li>
+    </ul>
+    
+    <!-- CSS seleção por classe -->
+    <h2><a id="css-selecao-classe">CSS: Seleção por classe</a></h2>
+    <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/intro-to-css/pt/css-selecting-by-class"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+    <p>Usa-se a seleção por classe para selecionar mais de um item que deva ter as mesmas características no documento, neste documento usei a seleção por classe para que todas as tags, seleções e itens novos que aparecem no texto ficassem destacados em negrito e da cor vermelha.</p>
+       <p>Exemplo:<br><br>
+        &ltbody&gt<br>
+        &ltp <strong class="itens-html">class="identificador-da-classe"</strong>&gt Texto do parágrafo seleção por classe.
+        &lt/p&gt<br>
+        &ltp <strong class="itens-html">class="identificador-da-classe"</strong>&gt Segundo texto do parágrafo seleção por classe.
+        &lt/p&gt<br>
+        &lt/body&gt<br></p>
+        <p>Cria na tag body uma classe para este e demais parágrafos que devam ter as mesmas propriedades como tamanho, cor, estilo, etc., então pode selecioná-la na tag style da seguinte forma:<br></p>
+    <p>&ltstyle&gt<br>
+    <strong class="itens-html"> .identificador-da-classe{<br>
+    color:rgb(0, 255, 251);<br>
+    }</strong><br>
+    &lt/style&gt<br></p>
+    <p>Visualização:</p>
+    <p class="identificador-da-classe"> Texto do parágrafo seleção por classe. </p>
+    <p class="identificador-da-classe"> Segundo texto do parágrafo seleção por classe. </p>
+    
+    <!-- Links HTML -->
+    <h2><a id="html-links">HTML: Links</a></h2>
+    <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/html-tags-continued/pt/html-links"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+    <p>Usados para conectar um documento HTML a outro através de hiperlinks (mais comumente chamados de links). </p>
+    <p class="itens-html"> &lta&gt e &lt/a&gt:</p>
+    <p>Dentro desta tag ancora-se o link desejado.</p>
+    <p> &lta  <strong class="itens-html">href=http://[...]</strong>&gt:</p>
+    <p>Assim cria-se um link para outro domínio.</p>
+    <p>Exemplo:<br>
+        &lta href= "https://pt.wikipedia.org/wiki/HTML" &gt Wikipédia - HTML.
+        &lt/a&gt</p>
+        <p> Visualização:</p>
+        <a href= "https://pt.wikipedia.org/wiki/HTML" > Wikipédia - HTML. </a>
+        <ul>Notas:
+        <li>Os links podem ser adicionados em imagens, parágrafos, trecho de texto, títulos, etc.</li>
+        <li>Para links no mesmo domínio, usar apenas "/": &lta href= "/[...]" &gt</li>
+            
+        </ul>
+    <!-- Links internos-->
+        <h2><a id="html-links-internos">Links internos HTML</a></h2>
+        <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/html-tags-continued/pt/html-internal-links"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+        <p> &lta  <strong class="itens-html">href="#[...]"</strong>&gt:</p>
+    <p>Links internos levam a outra sessão da mesma página.Por exemplo, o índice deste documento possui links pra cada um de seus itens e, clicando neles, o navegador direciona para a respectiva sessão. Criando um link interno: </p>
+    <p>Código:<br>
+    &lta href= "#indice" &gt Clique aqui para voltar ao índice.
+        &lt/a&gt</p>
+        <p> Visualização:</p>
+        <a href= "#indice" > Clique aqui para voltar ao índice. </a>
+    <!-- Tabelas HTML-->
+    <h2><a id="html-tabelas">Tabelas HTML</a></h2>
+    <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/html-tags-continued/pt/html-tables"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+    <p class="itens-html"> &lttable&gt e &lt/table&gt:</p>
+    <p> Tags de abertura e fechamento, respectivamente, da tabela.</p>
+    <p class="itens-html"> &ltthead&gt e &lt/thead&gt:</p>
+    <p>Abertura e fechamento do cabeçalho da tabela. Usado somente no cabeçalho.</p>
+    <p><p class="itens-html"> &lttr&gt e &lt/tr&gt:</p>
+    <p>Abertura e fechamento de cada linha da tabela.</p>
+    <p class="itens-html"> &ltth&gt e &lt/th&gt:</p>
+    <p>Cada célula do <u>cabeçalho</u> da tabela. Usado somente dentro da tag &lttr&gt no cabeçalho da tabela.</p>
+    <p class="itens-html"> &lttbody&gt e &lt/tbody&gt:</p>
+    <p>Abertura e fechamento do corpo da tabela.</p>
+    <p class="itens-html"> &lttd&gt e &lt/td&gt:</p>
+    <p>Abre e fecha cada célula do corpo da tabela. Usar dentro da tag de linha.</p>
+    <p>Exemplo de tabela (Código):<br>
+        &lttable&gt<br>
+        &ltthead&gt<br>
+        &lttr&gt<br>
+        &ltth&gt Itens &lt/th&gt<br>
+        &ltth&gt Quantidade &lt/th&gt<br>
+        &lt/tr&gt<br>
+        &lt/thead&gt<br>
+        &lttbody&gt<br>
+        &lttr&gt<br>
+        &lttd&gt Chocolate &lt/td&gt<br>
+        &lttd&gt 2 barras &lt/td&gt<br>
+        &lt/tr&gt<br>
+        &lttr&gt<br>
+        &lttd&gt Leite &lt/td&gt<br>
+        &lttd&gt 12 caixas &lt/td&gt<br>
+        &lt/tr&gt<br>
+        &lt/tbody&gt<br>
+        &lt/table&gt</p>
+        <p>Exemplo de tabela  (Visualização):</p>
+        <table class="table-exemplo">
+            <thead class="table-exemplo">
+            <tr>
+            <th> Itens </th>
+            <th> Quantidade </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td> Chocolate </td>
+            <td> 2 barras </td>
+            </tr>
+            <tr>
+            <td> Leite </td>
+            <td> 12 caixas </td>
+            </tr>
+            </tbody>
+        </table>
+        <p>Observação: a cor de fundo da tabela automaticamente é a mesma cor de fundo do HTML, enquanto a cor da letra automaticamente é preto(ou, no caso deste documento, a cor estava selecionada como o cinza presente no texto, como na tabela do índice. Para que ela se destacasse, criei uma classe para esta tabela na e, na tag style mudei para para "background:white;" .</p>
+        
+    <!-- Comentários em HTML -->
+    <h2><a id="html-comentarios">Comentários HTML</a></h2>
+    <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/html-tags-continued/pt/html-comments"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+    <p class="itens-html"> &lt!-- Texto do comentário --&gt</p>
+    <p>Comentários são trechos de texto não lidos pelo computador, ou seja, não visíveis no documento, apenas no seu código. São usados como notas, ou para explicar certa parte do código e deixar sua compreensão mais fácil para quem estiver trabalhando nele.</p>
+    <!-- propriedades de texto-->
+    <h2><a id="css-propriedades-de-texto">Propriedades de texto CSS</a></h2>
+    <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/css-text-properties/pt/css-font-family-property"> Acesse a aula de "Propriedade CSS font-family", da Khan Academy clicando aqui</a></h4>
+    <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/css-text-properties/pt/css-font-size-property"> Acesse a aula de "Propriedade CSS font-size", da Khan Academy clicando aqui</a></h4>
+    <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/css-text-properties/pt/css-font-styles-and-shorthand"> Acesse a aula de "Escrita e estilos de fonte CSS", da Khan Academy clicando aqui</a></h4>
+    <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/css-text-properties/pt/more-css-text-properties"> Acesse a aula de "Mais propriedades de texto CSS", da Khan Academy clicando aqui</a></h4>
+
+        <p><p class="itens-html"> line-propriedade a mudar da linha:mudança;</p>
+            <p>Muda propriedade de altura da linha.<br>
+        <p class="itens-html"> text-propriedade a mudar do texto:mudança;</p>
+            <p>Muda propriedades do texto. </p>
+        <p class="itens-html"> text-decoration:underline;</p>
+        <p> Neste exemplo, o texto selecionado fica sublinhado.
+                <p>Existem diversas propriedades de textoEstas propriedades ficam dentro dos seletores de CSS, dentro tag style.<br>
+                Exemplo:</p>
+                <p> Criar id, classe ou selecionar uma tag do HTML sem os "&lt&gt":<br>
+                    &ltbody&gt<br>
+                    &ltp id="texto-a-sublinhar"&gt Exemplo de texto a ser sublinhado &lt/p&gt<br>
+                    &lt/body&gt</p>
+                    
+                 <p> Selecionar o identificador, classe ou tag na tag style, dentro da tag head e colocar a mudança desejada dentro de chaves ({}):<br>
+                    &lthead&gt<br>
+                    &ltstyle&gt<br>
+                    #texto-a-sublinhar{<br>
+                    text-decoration:underline;<br>
+                    }
+                    &lt/style&gt<br>
+                    &lt/head&gt</p>
+                <p>Visualização:<br>
+                <p id="texto-a-sublinhar"> Exemplo de texto a ser sublinhado </p>
+                
+                <ul><strong><u>Exemplos de mais propriedades de texto:</u></strong>
+                    <li><a class="itens-html">font-size:</a> define o tamanho da fonte. Usa-se como unidade, mais comumente "em", para proporção e "px" para tamanho em pixel.</li>
+                    <li> <a class="itens-html">font-weight:</a> define a espessura da fonte, como negrito (bold).</li>
+                    <li><a class="itens-html">line-height:</a> define a altura(height) da linha(line). </li>
+                    <li><a class="itens-html">text-align:</a> define o alinhamento do texto - center/right/justified.</li>
+                    <li><a class="itens-html">font-family:</a> define a família da fonte ou a própria fonte a ser usada. </li>
+                    <li>Para mais propriedades, procurar o que deseja na internet, </li>
+                    <li>Pode-se abreviar as propriedades de fonte com: <a class="itens-html">font: weight/style size family;</a></li>
+                </ul>
+                <ul><u><strong>Mais informações sobre font-family:<br>
+                    Famílias de fontes:
+                </strong></u>
+                <li>Quando coloca-se apenas o nome da família, o computador seleciona a sua fonte principal na família.</li>
+                    <li>serif - fontes com prolongamentos nas extremidades, como a Times New Roman. </li>
+                    <li><a id="fonte-sans-serif">sans-serif :</a> fontes mais "retas", sem prolongamentos nas extremidades, como a Arial.</li>
+                    <li><a id="font-cursive">cursive :</a>  simula fontes escritas à mão.</li>
+                    
+                    <li><a id="font-fantasy">fantasy :</a>  fontes decorativas.</li>
+                    <li><a id="font-arial">Arial</a>  (família sans-serif)</li>
+                    <li>Para fontes mais específicas colocar o nome da fonte.</li>
+                    <u><strong>Exemplos de fontes:</strong></u>
+                    <li><a id="font-arial">Arial</a>  (família sans-serif)</li>
+                    <li><a id="font-helvetica">Helvetica</a> (família sans-serif) </li>
+                    <li><a id="font-verdana">Verdana</a> (família sans-serif) </li>
+                    <li><a id="font-times-new-roman">Times New Roman</a> (família serif) </li>
+                    <li><a id="font-georgia">Georgia</a> (família serif) </li>
+                    <li><a id="font-courier">Courier</a> (família monospace) </li>
+                    <li><a id="font-andale-mono">Andale Mono</a> (família monospace) </li>
+                    <li><a id="font-comic-sans">Comic Sans MS</a> (família cursive) </li>
+                    <li><a id="font-apple-chancery">Apple Chancery</a> (família cursive) </li>
+                    <li><a id="font-snell-roundhand">Snell Roundhand</a> (família cursive) </li>
+                    <li><a id="font-impact">Impact</a> (família fantasy) </li>
+                    <li><a id="font-jazz-let">Jazz LET</a> (família fantasy) </li>
+                    <li><a id="font-tratatello">Tratatello</a> (família fantasy) </li>
+                    Observações a respeito do uso do nome específico da fonte:
+                  <li>Eventualmente o navegador não possui a determinada fonte escolhida, como garantia insira outra fonte reserva e/ou o nome da família, caso contrário o navegador irá ignorar o chamado pelo nome da fonte e usará a fonte padrão do HTML. Ao fazer esta lista de fontes, meu navegador não possuía algumas das fontes usadas no exemplo, portanto nestas, para mim, aparece a fonte Times New Roman em todas os exemplos de fontes que ele não possui (talvez aparecerá assim para você também).</li>
+                  <li> Para que isso não aconteça no documento, insira a fonte reserva e/ou família da seguinte forma:<a class="itens-html"> font-family:"nome da fonte desejada", "nome da fonte reserva caso haja", "nome da família"; </a><br>
+                  Por exemplo: para selecionar primeiramente a Helvética, como segunda opção a Arial e então ,como terceira opção, ficaria da seguinte forma: <a id="exemplo-font-family-sans-serif">font-family: "helvética", "arial", "sans-seriff"; .</a></li>
+                </ul>
+                
+        <h2><a id="css-heranca">Herança CSS</a></h2>
+        <h4><a target="blank" href="https://pt.khanacademy.org/computing/computer-programming/html-css/css-text-properties/pt/css-inheritance"> Acesse a aula da Khan Academy clicando aqui</a></h4>
+        <p>Algumas propriedades de classe são herdadas das classes mães passando tais características para as classes filhas, só deixando de ser utilizadas caso uma regra mais específica seja acionada. </p>
+        <p>Como exemplo, neste documento, todos os h2 de título têm a configuração de espaçamento "5em" e sublinhado, exceto o h2 presente no exemplo do capítulo "Fundamentos de HTML", que mantém o espaçamento em "1em" por uma regra mais específica da classe em que está presente, porém mantém a cor definida para a tag h2 por herdar esta propriedade. Assim como o título inicial, h1, do documento, que está com a configuração para espaçamento de linha em "3em" e alinhamento centralizado, ambas as propriedades não são passadas ao títilo h1 presente no exemplo do mesmo capítulo, ambos exemplos pertencem à mesma classe.</p>
+
+    
+<ul>Pesquisas externas:
+    <li> <a target="blank" href="https://www.w3.org/Style/Examples/007/fonts.pt_BR.html"> W3.org: "Folhas de estilo para a Web
+CSS dicas e macetes"</a></li>
+</ul>
+    </body>        
+</html>

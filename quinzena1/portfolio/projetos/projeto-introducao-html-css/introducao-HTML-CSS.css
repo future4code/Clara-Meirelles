@@ -1,0 +1,136 @@
+<style>
+p{
+    color: rgb(163, 163, 163);
+}
+ul{
+    color: rgb(163, 163, 163);
+}
+ol{
+    color: rgb(163, 163, 163);
+}
+h1{
+    color:rgb(237, 237, 237);
+    line-height: 3em;
+    text-align: center;
+}
+h2{
+   color:rgb(237, 237, 237);
+   line-height:5em;
+   text-decoration:underline;
+}
+h3{
+    color:rgb(237, 237, 237);
+}
+h4{
+    color:rgb(237, 237, 237);
+}
+h5{
+    color:rgb(237, 237, 237);
+}
+h6{
+    color:rgb(237, 237, 237);
+}
+.exemplo-titulos{
+    
+    line-height:1em;
+    text-align:left;
+    text-decoration:none;
+}
+.itens-html{
+    font-weight:bold;
+    color: red;
+}
+html{
+background-color:black;
+}
+table{
+color: rgb(163, 163, 163);    
+}
+thead{
+    color:rgb(237, 237, 237);
+}
+.table-exemplo{
+    background-color:white;
+    color:black;
+}
+#texto-a-sublinhar{
+    text-decoration:underline;
+}
+#identificador-do-paragrafo{
+background-color: yellow;
+}
+.identificador-da-classe{
+color:rgb(0, 255, 251);
+}
+#fonte-sans-serif{
+    font-family:sans-serif;
+    color:red;
+}
+#font-arial{
+    font-family:arial;
+    color:red;
+}
+#font-helvetica{
+    font-family:helvetica;
+    color:red;
+}
+#font-verdana{
+    font-family:verdana;
+    color:red;
+}
+#font-cursive{
+    font-family:cursive;
+    color:red;
+}
+#font-monospace{
+    font-family:monospace;
+    color:red;
+}
+#font-fantasy{
+    font-family:fantasy;
+    color:red;
+}
+#font-times-new-roman{
+    font-family:"times new roman";
+    color:red;
+}
+#font-georgia{
+    font-family:"georgia";
+    color:red;
+}
+#font-courier{
+    font-family:"courier";
+    color:red;
+}
+#font-andale-mono{
+    font-family:"andale mono";
+    color:red;
+}
+#font-comic-sans{
+    font-family:"comic sans ms";
+    color:red;
+}
+#font-apple-chancery{
+    font-family:"apple chancery";
+    color:red;
+}
+#font-snell-roundhand{
+    font-family:"snell roundhand";
+    color:red;
+}
+#font-impact{
+    font-family:"impact";
+    color:red;
+}
+#font-jazz-let{
+    font-family:"jazz let";
+    color:red;
+}
+#font-tratatello{
+    font-family:"tratatello";
+    color:red;
+}
+#exemplo-font-family-sans-serif{
+    font-family: "helvética", "arial", "sans-seriff";
+}
+</style>
