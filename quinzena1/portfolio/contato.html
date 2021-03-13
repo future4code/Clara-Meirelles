@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contato</title>
+</head>
+<div>
+    <div>
+        <p class="clara-meirelles">Portfólio Clara Meirelles</p>
+    </div>
+
+    <nav class="navegacao-pagina">
+        <a href="portfolio-clara-meirelles.html" class="links-paginas">Página Inicial</a>
+        <a href="sobre-mim.html" class="links-paginas">Sobre mim</a>
+        <a href="habilidades.html" class="links-paginas">Habilidades</a>
+        <a href="projetos.html" class="links-paginas">Projetos</a>
+        <a id="selected" href="contato.html" class="links-paginas">Contato</a>
+    </nav>
+
+    <!--Uma formulário para contato. Ele deve receber nome, email e texto. Nessa etapa o formulário não precisa mandar email ou interagir 
+    com o usuário.
+- Uma lista de redes sociais e links seus para contato. Sugerimos linkedin, github, email, twitter, facebook, etc ...-->
+    <!-- Formato:
+    Nome    |ícones
+    e-mail  |redes
+    msg     |sociais
+-->
+    <h1 id="titulo-contato">Contato:</h1>
+    <div class="formulario-contato">
+        <div id="formulario">
+            <form>
+                <div>
+                    <label for="nome">Nome Completo: </label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+
+                <div>
+                    <label for="email">E-mail: </label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div>
+                    <label id="msg">Mensagem: </label>
+                    <textarea id="msg" name="mensagem"></textarea>
+                </div>
+
+                <div class="form-add">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <div>
+                <p>Redes sociais e contatos:</p>
+            </div>
+        </div>
+
+        <div>
+            <a href="https://www.instagram.com/c.meirelles/" target="_blank" rel="instagram"><img
+                    src="icones-redes-sociais/instagram-3814048_640.png" alt="instagram" width="50vw" /></a>
+            <a href="https://www.linkedin.com/in/clara-meirelles/" target="_blank" rel="linkedin"><img
+                    src="icones-redes-sociais/linkedin-3000959_640.png" alt="linkedin" width="50vw" /></a>
+            <!-- link linkedin: https://www.linkedin.com/in/clara-meirelles/ -->
+            <a href="https://api.whatsapp.com/send?phone=5548999321379" target="_blank" rel="whatsapp "><img
+                    src="icones-redes-sociais/whatsapp-3000966_640.png" alt="whatsapp" width="50vw" /></a>
+            <!-- <img src="icones-redes-sociais/letter-2935365_640.png" alt="e-mail" width="50vw" /> -->
+        </div>
+    </div>
+    </body>
+
+</html>
