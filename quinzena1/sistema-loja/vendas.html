@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vendas</title>
+</head>
+
+<body>
+    <div class="cabecalho">
+        <div class="titulo-pagina">
+            <p><strong>Lojinha da Shisha</strong></p>
+        </div>
+
+        <div class="links-pagina">
+            <a href="index.html">Página Inicial</a>
+            <a href="ctrl-estoque.html">Controle de Estoque</a>
+            <a href="add-produto.html">Adicionar Produto</a>
+            <a href="funcionarios.html">Funcionários</a>
+            <a href="vendas.html">Vendas</a>
+            <a href="historico-vendas.html">Histórico de Vendas</a>
+        </div>
+    </div>
+    <div class="conteudo-pagina">
+        <div class="adicionar-produtos-venda">
+            <form action="">
+                <div>
+                    <h2>Adicionar Produtos ao Carrinho</h2>
+                    <label for="compra-produto">Produto: </label>
+                    <select id="compra-produto" name="produtos comprados">
+                        <option value="selecione">Selecione o Produto</option>
+                        <option value="biscoito">Biscoito</option>
+                        <option value="caminha">Caminha</option>
+                        <option value="coleira">coleira</option>
+                        <option value="comedouro">Comedouro</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="quantidade-vendida">Quantidade: </label>
+                    <input type="number" id="quantidade-vendida" name="quantidade vendida">
+                    <select id="compra-produto" name="produtos comprados">
+                        <option value="selecione-tipo"></option>
+                        <option value="kg">kg</option>
+                        <option value="unit">unidade</option>
+                        <option value="pct">pacote</option>
+                    </select>
+
+                </div>
+                <!-- ESTE BOTÃO MANDA OS DADOS PARA A TABELA DO CARRINHO -->
+                <div class="form-add">
+                    <button type="submit" value="adicionar+produtos">Adicionar mais produtos.</button>
+                </div>
+        </div>
+
+
+        </form>
+
+        <div class="carrinho">
+            <h2>Carrinho</h2>
+            <table>
+                <tr class="cabecalho-tabela">
+                <th>Item</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Valor total</th>
+                </tr>
+                <tr>
+                    <!-- tabela exemplo de como ficaria com o botão funcionando -->
+                    <td>Caminha</td>
+                    <td>1</td>
+                    <td>R$ 150,00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Ração</td>
+                    <td>3 kg</td>
+                    <td>R$ 39,00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Coleira</td>
+                    <td>1</td>
+                    <td>R$ 20,00</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <!-- AQUI CALCULAR TOTAL DA VENDA!!! -->
+                    <th>Total:</th>
+                    <td>209,00</td>
+                </tr>
+            </table>
+            <div>
+                <!-- Desta parte fecha a venda e manda os dados para a aba de
+                    histórico de vendas [A FAZER]-->
+                <form action="">
+                    <div action="">
+                        <fieldset class="tipo-pgto">
+                            <!-- NÃO ESTA MARCANDO SÓ UMA OPÇÃO -->
+                            <legend>Tipo de Pagamento:</legend>
+                            <label for="credit">Crédito</label>
+                            <input type="radio" name="tipo-pagamento" id="credit">
+                            <label for="debit">Débito</label>
+                            <input type="radio" name="tipo-pagamento" id="dinheiro">
+                            <label for="tipo-pagamento">Dinheiro</label>
+                            <input type="radio" name="dinheiro" id="tipo-pagamento">
+                        </fieldset>
+                    </div>
+
+                    <div>
+                        <label for="vendedor">Vendedor: </label>
+                        <select id="vendedor" name="Vendedor responsável">
+                            <option value="selecione">Selecione o Vendedor</option>
+                            <option value="vira-latas-c">Vira-latas Caramelo</option>
+                            <option value="lila-p">Lila Piber</option>
+                            <option value="Leonardo-f">Leonardo Farias</option>
+                            <option value="frico-l">Frico de Lucca</option>
+                            <option value="pandora-s">Pandora da Silva</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="date">Data da Venda</label>
+                        <input type="date" id="date" name="data da venda">
+                    </div>
+                    <!-- ESSE BOTÃO GERA A COMANDA/BOLETO E MANDA OS DADOS PRO 
+                    FORMULÁRIO DE HISTÓRICO DE VENDAS -->
+                    <div class="form-add">
+                        <button type="submit">Finalizar venda.</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </form>
+    </div>
+
+
+
+    <div class="rodape">
+        <p class="mensagem-redes">Siga-nos nas redes sociais!</p>
+
+        <div class="redes-sociais">
+            <img class="icones-redes-sociais" src="https://image.flaticon.com/icons/png/512/25/25305.png"
+                width="30pw" />
+            <img class="icones-redes-sociais" src="https://image.flaticon.com/icons/png/512/25/25425.png"
+                width="30pw" />
+            <img class="icones-redes-sociais" src="https://image.flaticon.com/icons/png/512/8/8800.png" width="30pw" />
+        </div>
+    </div>
+</body>
+
+</html>

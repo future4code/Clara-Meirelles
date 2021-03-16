@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: lightseagreen;
+    height: 10%;
+    padding-right: 10vw ;
+    padding-top: 3%;
+    padding-bottom: 0px;
+    text-align: end;
+    font-size: 25px ;
+}
+
+.links-paginas{
+    background-color:purple;
+    padding: 2px;
+    margin:2px;
+    border: 1px solid black;
+    border-radius: 3px;
+    }
+    
+    .navegacao-pagina a{
+        color: white;  
+    }
+
+#pagina-inicial{
+    height: 60vh;
+    font-size: 2em;
+    padding-top: 16%;
+    font-family: monospace;
+    color: darkgray;
+}
+
+p.nav{
+    color: darkturquoise;
+}
+
+/* .bottom{
+    height: 10vh;
+} */
+.clara-meirelles{
+    font-family: fantasy;
+    color:black;
+}
+#img-eu{
+    /* text-align: left; */
+    display: inline;
+    margin: 2 auto;    
+}
+.campo-txt{
+    /* background-color: purple; */
+    display: block;
+    padding-top: 3%;
+    width: 70vw;
+    margin: auto;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.campo-txt #sobre-mim{
+    display: inline-block;
+    /* background-color: pink; */
+    width: 40vw;
+    text-align: left;
+}
+ .fotos-sobre{
+text-align: center;
+margin: 30px;
+ }
+.formulario-contato{
+    padding-top: 5%;
+    padding-left: 5%;
+    width: 60%;
+    text-align: left;
+}
+.skills{
+    display: inline-block;
+    width: 15vw;
+    margin: 0 auto;
+    background-color: purple;
+    text-align: center;    
+}
+.skills .soft {
+    color: white;
+}
+.skill-item{
+    border-radius: 3px;
+    border: black;
+    border-style: solid;
+    background-color: lightseagreen;
+    margin: 1%;
+}
+.hard-skills{
+    background-color: yellow;
+    padding: 2px;
+    
+}

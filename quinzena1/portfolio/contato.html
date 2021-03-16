@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contato</title>
+</head>
+<form>
+    <div>
+        <p class="clara-meirelles">Portfólio Clara Meirelles</p>
+    </div>
+    
+    <nav class="navegacao-pagina">
+        <a href="portfolio-clara-meirelles.html" class="links-paginas">Página Inicial</a>
+        <a href="sobre-mim.html" class="links-paginas">Sobre mim</a>
+        <a href="habilidades.html" class="links-paginas">Habilidades</a>
+        <a href="projetos.html" class="links-paginas">Projetos</a>
+        <a href="contato.html" class="links-paginas">Contato</a>
+    </nav>
+
+<!--Uma formulário para contato. Ele deve receber nome, email e texto. Nessa etapa o formulário não precisa mandar email ou interagir 
+    com o usuário.
+- Uma lista de redes sociais e links seus para contato. Sugerimos linkedin, github, email, twitter, facebook, etc ...-->    
+<!-- Formato:
+    Nome    |ícones
+    e-mail  |redes
+    msg     |sociais
+-->
+<div class="formulario-contato">
+    <form >
+    <div>
+        <label for="nome">Nome Completo: </label>
+        <input type="text" id="nome" name="nome">
+    </div>
+
+    <div>
+        <label for="email">Seu E-mail: </label>
+        <input type="email" id="email" name="email">
+    </div>
+
+    <div>
+        <label id="msg">Mensagem: </label>
+        <textarea id="msg" name="mensagem"></textarea>
+    </div>
+
+    <div class="form-add">
+        <button type="submit">Enviar</button>
+    </div>
+    </form>
+</div>
+</body>
+</html>
