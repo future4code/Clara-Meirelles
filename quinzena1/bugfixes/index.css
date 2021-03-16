@@ -33,6 +33,7 @@ button:focus {
 
 img {
     width: 50px ;
+   
 }
 
 div>p:first-child {
@@ -63,6 +64,13 @@ div>p:first-child {
 
 .icone {
     height: 15px;
+}
+
+.icone:hover{
+    opacity: 60%;
+}
+.icone:active{
+    opacity: initial;
 }
 
 
