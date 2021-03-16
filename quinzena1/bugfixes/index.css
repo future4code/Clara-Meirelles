@@ -71,6 +71,8 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    padding-top: 10vh;  
+    height: 40vh; 
 }
 
 #container-de-descricao>ol {
@@ -79,16 +81,21 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
+    height: 40vh;
+    padding-top: 5vh;
 }
 
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+ 
 }
 .container button{
     display: block;
     margin: 0 auto;
+    margin-top: 10vh;
+    
 }
 
 
