@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
 p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 nav{
     background-color: lightseagreen;
     height: 10%;
@@ -21,12 +23,13 @@ nav{
     margin:2px;
     border: 2px solid black;
     border-radius: 4px;
-    }
+}
 
     #selected{
         border: 3px solid yellow;
         border-radius: 4px;
     }
+
     .navegacao-pagina a{
         color: white;  
     }
@@ -71,10 +74,12 @@ p.nav{
     text-align: justify;
     
 }
+
  .fotos-sobre{
 text-align: center;
 margin: 0;
- }
+
+}
 
 .formulario-contato{
     padding-top: 5%;
@@ -173,3 +178,4 @@ margin: 0;
     position: absolute;
     top:0;
 } */
+

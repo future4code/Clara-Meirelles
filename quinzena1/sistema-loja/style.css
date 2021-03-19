@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.corpo-pagina{
+    height: 66vh;
+
+}
+.redes-sociais{
+    display: block;
+    width: 100vw;
+    background-color: gray;
+    text-align: center;
+    position:absolute;
+    bottom:0;
+    margin-top: 10px;
+    width: ;
+    background-color: gray;
+    text-align: center;
+    margin-bottom: 0;
+}
+.titulo-pagina{
+    background-color: goldenrod;
+    padding: 20px;
+    color:midnightblue;
+}
+
+/*.cabecalho{
+    position: fixed;
+    top:0;
+    display: block;
+}*/
+
+body{
+    background-color: midnightblue;
+    height: 100vh;
+}
+.links-pagina{
+    background-color: gray;
+    background-color:gray;
+    padding: 10px;
+    
+}
+.conteudo-pagina{
+    margin: 5vw;
+    margin: 30px;
+    background-color: silver;
+    height: 57vh;
+    padding: 30px;
+}
+h1.titulo-pagina{
+    padding-bottom: 2px;
+}
+p.titulo-pagina{
+    padding-top: 2px;
+}
+a.links-pagina{
+}
+
+a{
+    color:whitesmoke;
+}
+.icones-redes-sociais{
+    display: inline-block;
+    padding-left: auto;
+    padding-right: auto;
+    margin:8px;
+    }
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+.foto-shisha{
+    display: block;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#estoque-produtos{
+    height:auto;
+    width: auto;
+    margin:8px;
+}
+.mensagem-redes{
+    color: darkgoldenrod;
+    text-align: center;
+}
+fieldset.tipo-pgto{
+    display: inline;
+}
+/*#venda-produtos{
+    width: 100vw;
+    margin: auto;
+   text-align: justify;
+}*/
+.adicionar-produtos-venda{
+    display: inline-block;
+    width: 30vw;
+    position: relative;
+    top: 6vh;
+    background-color: white;
+    padding: 1vh 60px 1vh 2vw;
+}
+.carrinho{
+display: inline;
+width: 50vw;
+position:absolute;
+right:00px;
+top:30vh;
+background-color: white;
+width: 30vw;
+margin-right: 6vw ;
+padding: 1vh 6vw;
+text-align: left;
+
+}
+.rodape{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+th.hst-vendedor{
+    background-color: darkgoldenrod;
+}
+/*.carrinho*/ table{
+   text-align: justify;
+   margin: 3px;
+    
+}
+/*.carrinho */tr{
+    margin-bottom: 3px;
+    margin:5px;
+}
+ #cabecalho-tabela1, #cabecalho-tabela2{
+    background-color: midnightblue;
+    color: white;
+}
+/*.carrinho*/ tr:nth-child(even){
+    background-color: goldenrod;
+}
+/*.carrinho */tr:nth-child(odd){
+  background-color: silver ;
+}
+/*.carrinho*/ td , th{
+    padding: 6px;
+    text-align: justify;
+
+}
