@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 nav{
     background-color: lightseagreen;
     height: 10%;
@@ -16,57 +21,66 @@ nav{
     background-color:purple;
     padding: 2px;
     margin:2px;
-    border: 1px solid black;
-    border-radius: 3px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+    #selected{
+        border: 3px solid yellow;
+        border-radius: 4px;
     }
-    
+
     .navegacao-pagina a{
         color: white;  
     }
 
 #pagina-inicial{
-    height: 60vh;
+    height: 48vh;
     font-size: 2em;
     padding-top: 16%;
     font-family: monospace;
     color: darkgray;
+    margin-left: 2vw;
 }
 
 p.nav{
     color: darkturquoise;
 }
 
-/* .bottom{
-    height: 10vh;
-} */
 .clara-meirelles{
     font-family: fantasy;
     color:black;
 }
+
 #img-eu{
     /* text-align: left; */
     display: inline;
-    margin: 2 auto;    
+    margin: 2vh 2vw 2vh 0; 
 }
+
 .campo-txt{
     /* background-color: purple; */
     display: block;
     padding-top: 3%;
     width: 70vw;
+    height: 45vh;
     margin: auto;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .campo-txt #sobre-mim{
     display: inline-block;
-    /* background-color: pink; */
-    width: 40vw;
-    text-align: left;
+    width: 33vw;
+    text-align: justify;
+    
 }
+
  .fotos-sobre{
 text-align: center;
-margin: 30px;
- }
+margin: 0;
+
+}
+
 .formulario-contato{
     padding-top: 5%;
     padding-left: 5%;
@@ -95,3 +109,73 @@ margin: 30px;
     padding: 2px;
     
 }
+
+.formulario-contato{
+    display: block;
+    width: 30vw;
+    text-align: center;
+    margin: 0 auto;
+}
+#formulario{
+    text-align: left;
+    margin-top: 5vh;
+    background-color: purple;
+    padding: 8px;
+    width: 160px;
+    border: 5px solid yellow;
+    border-radius: 5px; 
+    color: white;
+}
+#titulo-contato{
+    margin-top: 10vh;
+    margin-left: 10vw;
+    font-family: fantasy;
+}
+
+}
+.seta-sobre-mim{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: purple;
+}
+.seta-baixo{
+    width: 100%;
+    text-align: center;
+    /* aparecer só com o mouse em cima */
+    /* display: none; */
+}
+.seta-baixo:hover{
+    /* MUDAR PARA MENSAGEM "IR PARA:" */
+    /* MUDAR PARA SOMENTE NA IMG */
+    background-color: purple;
+    /* display:block; */
+}
+/* .ordem-barra-rodape{
+    display: inline;
+} */
+.footer{
+    margin-bottom: 0;
+    margin-top: 2vh;
+    /*ajeitar esta caca */
+    /* position:fixed;
+    bottom:0;
+    display: block; */
+}
+
+.projetos-alinhamento{
+    display: inline-block;
+    height: 30vh;
+    /* text-align: center;
+    width: 100%;
+    display: block; */
+}
+/* !!!! ORGANIZAR O ALINHAMENTO DOS PROJETOS !!! */
+/* .projetos-alinhamento img{
+    position: relative;
+}
+.projetos-alinhamento p{
+    position: absolute;
+    top:0;
+} */
+
