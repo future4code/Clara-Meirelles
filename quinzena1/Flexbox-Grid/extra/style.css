@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #eef0f1;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#corpo-pagina{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5vh 1fr;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 6px;
+
+}
+
+#cabecalho{
+    width: 100vw;
+    height: 5vh;
+    grid-column: 1/5;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    background-color: wheat;
+}
+
+.icon{
+    height: 5vh;
+}
+
+#popular-tags{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#design-your-experience ul{
+    background-color: white;
+    width: fit-content;
+    padding: 2%;
+    border: 1px solid #a4a8aa;
+    border-radius: 5px;
+    margin-top: 5vh;
+    margin-left: 10px;
+    display: block;
+    text-align: justify;
+}
+
+#content{
+    grid-column: 2/4;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+#head-corpo{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+#links-navecagao{
+    margin-right: 10px;
+}
+.links{
+ background-color: #97bbce;
+ padding: 5px;
+ border-radius: 5px;
+ margin-right: 5px;
+}
+
+.posts img{
+    width: 35vw;
+}
+
+.posts{
+    margin-top: 1vh;
+    padding: 2%;
+    background-color: white;
+    width: 36vw;
+
+}
+
+#join{
+    background-color: white;
+    border: blue 5px solid;
+    height: 30vh;
+    width: 20vw;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#join p{
+    color: white;
+    background-color: blue;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    width: 100%;  
+}
+
+#join button{
+    border-radius: 15px;
+    display: block;  
+    margin-top: 32px;
+    width: fit-content;  
+}
