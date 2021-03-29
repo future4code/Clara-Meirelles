@@ -1,0 +1,9 @@
+INICIO
+VARIAVEIS
+    num
+
+num <- ESCREVA "Digite um número"
+
+IMPRIMA num-1
+
+FIM
