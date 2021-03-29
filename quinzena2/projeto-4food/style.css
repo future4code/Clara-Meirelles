@@ -170,6 +170,7 @@ li a{
                 border:2px solid rgb(81, 38, 14);
                 padding: 5px;
             }
+
             .itens-venda h3, .itens-venda-extra h3{
                 padding:10px;
                 width: fit-content;
@@ -413,6 +414,8 @@ li a{
         padding:10px;
         margin-right: 4vw;
         border: #51260e solid 2px;
+        font-size: 1em;
+        text-align: left;
     }
 
     #corpo-texto-index #pedido-mercado, #corpo-texto-index #refeicoes-assinatura{
