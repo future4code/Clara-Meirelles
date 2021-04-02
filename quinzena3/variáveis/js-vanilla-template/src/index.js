@@ -89,3 +89,4 @@ console.log(arrayPerguntas[2], arrayRespostas[2])
 /* Nesse eu poderia ter posto só um true e um false e usado nas respostas? - Funcionou quando tentei, mas já que o Bruno disse que o JS deixa
 a gente fazer qualquer coisa, achei melhor perguntar*/
 
+z
