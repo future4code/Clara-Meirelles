@@ -24,14 +24,18 @@ while (confirm("Gostaria de iniciar uma nova rodada?") === true) {
    const cartasUsuario = [cartaUsuario1, cartaUsuario2]
    const cartasComputador = [cartaComputador1, cartaComputador2]
 
+   // Confere se as cartas iniciais são ambas "A" para algum dos jogadores.
    if (cartaUsuario1.valor + cartaUsuario2.valor === 22) {
       cartaUsuario1 = comprarCarta()
       cartaUsuario2 = comprarCarta()
-   } else if (cartaComputador1.valor + cartaComputador2.valor === 22) {
+   }
+
+   if (cartaComputador1.valor + cartaComputador2.valor === 22) {
       cartaUsuario1 = comprarCarta()
       cartaComputador2 = comprarCarta()
    }
 
+   // Calcula o valor das cartas iniciais dos dois jogadores
    let totalUsuario = cartasUsuario[0].valor + cartasUsuario[1].valor
    let totalComputador = cartasComputador[0].valor + cartasComputador[1].valor
 
@@ -43,7 +47,6 @@ while (confirm("Gostaria de iniciar uma nova rodada?") === true) {
 
    //comprar nova carta - usuário
    let indiceUltimaCarta = cartasUsuario.length - 1
-   let novaCarta
    while (totalUsuario < 21 && confirm("Suas cartas são: " + cartasUsuarioTexto + "\nSeu total de pontos é: " + totalUsuario + "\nA carta revelada do computador é: " + cartaComputador1.texto + "\n \nDeseja comprar mais uma carta?")
    ) {
       cartasUsuario.push(comprarCarta())
@@ -54,9 +57,9 @@ while (confirm("Gostaria de iniciar uma nova rodada?") === true) {
       console.log("Seu total de pontos é:", totalUsuario)
       alert("Sua nova carta é: " + cartasUsuario[indiceUltimaCarta].texto)
    }
-      alert("Suas cartas são: " + cartasUsuarioTexto + "\nSeu total de pontos é: " + totalUsuario)
-   
+   alert("Suas cartas são: " + cartasUsuarioTexto + "\nSeu total de pontos é: " + totalUsuario)
 
+   //Mostra as cartas do computador
    const cartasComputadorTexto = [cartaComputador1.texto, cartaComputador2.texto]
 
    console.log("As cartas do computador são:", cartasComputador[0].texto, cartasComputador[1].texto, "-", totalComputador)
@@ -74,7 +77,7 @@ while (confirm("Gostaria de iniciar uma nova rodada?") === true) {
 
    }
 
-   //Pontuação
+   //Exibe a pontuação final dos dois jogadores
    if ((totalUsuario > totalComputador) && (totalUsuario <= 21)) {
       console.log("O seu total de pontos foi:", totalUsuario)
       console.log("O total de pontos do computador foi:", totalComputador)
