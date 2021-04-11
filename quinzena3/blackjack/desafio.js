@@ -21,19 +21,25 @@ while (confirm("Gostaria de iniciar uma nova rodada?") === true) {
    let cartaUsuario2 = comprarCarta()
    let cartaComputador1 = comprarCarta()
    let cartaComputador2 = comprarCarta()
-   const cartasUsuario = [cartaUsuario1, cartaUsuario2]
-   const cartasComputador = [cartaComputador1, cartaComputador2]
+   let cartasUsuario = [cartaUsuario1, cartaUsuario2]
+   let cartasComputador = [cartaComputador1, cartaComputador2]
 
    // Confere se as cartas iniciais são ambas "A" para algum dos jogadores.
    if (cartaUsuario1.valor + cartaUsuario2.valor === 22) {
       cartaUsuario1 = comprarCarta()
       cartaUsuario2 = comprarCarta()
-   }
+      cartasUsuario = [cartaUsuario1, cartaUsuario2]
+   }  
+   
 
    if (cartaComputador1.valor + cartaComputador2.valor === 22) {
-      cartaUsuario1 = comprarCarta()
+      cartaComputador1 = comprarCarta()
       cartaComputador2 = comprarCarta()
+      cartasComputador = [cartaComputador1, cartaComputador2]
    }
+   
+   cartasUsuario = [cartaUsuario1, cartaUsuario2]
+   cartasComputador = [cartaComputador1, cartaComputador2]
 
    // Calcula o valor das cartas iniciais dos dois jogadores
    let totalUsuario = cartasUsuario[0].valor + cartasUsuario[1].valor
@@ -66,7 +72,7 @@ while (confirm("Gostaria de iniciar uma nova rodada?") === true) {
    alert("As cartas do computador são: " + cartasComputadorTexto + "\nO total de pontos do computador foi: " + totalComputador)
 
    // comprar nova carta - computador
-   while (totalComputador < 21 && totalComputador < totalUsuario && totalUsuario <= 21) {
+   while (totalComputador <= 19 && totalComputador < totalUsuario && totalUsuario <= 21) {
       cartasComputador.push(comprarCarta())
       const indiceUltimaCartaComputador = cartasComputador.length - 1
       totalComputador += cartasComputador[indiceUltimaCartaComputador].valor
@@ -91,7 +97,7 @@ while (confirm("Gostaria de iniciar uma nova rodada?") === true) {
    } else if (totalUsuario > 21) {
       console.log("O seu total de pontos foi:", totalUsuario)
       console.log("O total de pontos do computador foi:", totalComputador)
-      console.log("EITA! Você passou de 21!, o computador venceu!")
+      console.log("EITA! Você passou de 21!, o computador venceu!") 
       alert("Suas cartas: " + cartasUsuarioTexto + "\nO seu total de pontos foi: " + totalUsuario + "\n \nAs cartas do computador são: " + cartasComputadorTexto + "\nO total de pontos do computador foi: " + totalComputador + "\n \nEITA! Você passou de 21!, o computador venceu!!")
 
    } else if (totalComputador > 21) {
