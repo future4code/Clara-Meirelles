@@ -172,7 +172,6 @@ function segundoMaiorEMenor(array) {
       if (maiorNumero < array[i]) {
          segundoMaiorNumero = maiorNumero
          maiorNumero = array[i]
-         console.log(maiorNumero)
       }
       if (menorNumero > array[i]) {
          segundoMenorNumero = menorNumero
@@ -187,12 +186,25 @@ function segundoMaiorEMenor(array) {
 
 }
 
-segundoMaiorEMenor([13, 12, 41, 15, 10, 16, 23, 8, 0])
+segundoMaiorEMenor()
 
 //Exercício 11
 
 function ordenaArray(array) {
-   // implemente sua lógica aqui
+   for (let i = 0; i < array.length; i++) {
+      let numeroAnterior = i
+      for (let proximoNumero = i + 1; proximoNumero < array.length; proximoNumero++) {
+         if (array[proximoNumero] < array[numeroAnterior]) {
+            numeroAnterior = proximoNumero
+         }
+      }
+      if (numeroAnterior !== i) {
+         let temporario = array[i]
+         array[i] = array[numeroAnterior]
+         array[numeroAnterior] = temporario
+      }
+   }
+   return array
 }
 
 // Exercício 12
