@@ -186,8 +186,6 @@ function segundoMaiorEMenor(array) {
 
 }
 
-segundoMaiorEMenor()
-
 //Exercício 11
 
 function ordenaArray(array) {
@@ -211,18 +209,45 @@ function ordenaArray(array) {
 
 function filmeFavorito() {
    // implemente sua lógica aqui
+
+   /**
+    * criar um objeto que tenha esses valores em suas variáveis;(descobrir como encontrar esses valores)
+    
+   let astrodevAwards = {
+      nome: "O Diabo Veste Prada",
+      ano: 2006,
+      diretor: "David Frankel",
+      atores: ["Meryl Streep", "Anne Hathaway", "Emily Blunt", "Stanley Tucci"],
+   }
+
+    */
+   
+   return(astrodevAwards)
 }
 
 // Exercício 13
 
 function imprimeChamada() {
    // implemente sua lógica aqui
+   /*
+   descobrir como acessar os dados da função anterior, já que não funciona assim.
+   filmeFavorito()
+   console.log(`Venha assistir ao filme ${astrodevAwards.nome}, de ${astrodevAwards.ano}, dirigido por ${astrodevAwards.diretor} e estrelado por ${astrodevAwards.atores[0]}, ${astrodevAwards.atores[1]}, ${astrodevAwards.atores[2]},${astrodevAwards.atores[3]}`)
+   */
 }
 
 // Exercício 14
 
 function criaRetangulo(lado1, lado2) {
    // implemente sua lógica aqui
+
+   let retangulo = {
+      largura: lado1,
+      altura: lado2,
+      perimetro: (2*(lado1+lado2))
+      area: (lado1*lado2)
+
+   }
 }
 
 // Exercício 15
