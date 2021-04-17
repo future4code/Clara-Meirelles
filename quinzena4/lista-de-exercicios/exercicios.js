@@ -162,59 +162,29 @@ function comparaDoisNumeros(num1, num2) {
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
-   let arrayIntermediario = []
    let arrayFinal = []
    let maiorNumero = 0
    let menorNumero = 100000000000
    let segundoMaiorNumero = 0
    let segundoMenorNumero = 100000000000
-   let indexMaiorNumero
-   let indexMenorNumero
-
-   // for (let i = 0; i < array.length; i++) {
-   //    if (maiorNumero < array[i]) {
-   //       maiorNumero = array[i]
-   //       indexMaiorNumero = i
-   //    }
-   // }
-   // array.splice(indexMaiorNumero, 1)
-   // for (let i = 0; i < array.length; i++) {
-   //    if (menorNumero > array[i]) {
-   //       menorNumero = array[i]
-   //       indexMenorNumero = i
-   //    }
-   // }
-
-   // array.splice(indexMenorNumero, 1)
-   // for (let i = 0; i < array.length; i++) {
-   //    if (segundoMaiorNumero < array[i]) {
-   //       segundoMaiorNumero = array[i]
-   //    }
-   // }
-   // arrayFinal.push(segundoMaiorNumero)
-   // for(let i = 0; i<array.length; i++){
-   //    if (segundoMenorNumero> array[i]){
-   //       segundoMenorNumero = array[i]
-   //    }
-   // }
-   // arrayFinal.push(segundoMenorNumero)
-   // console.log(arrayFinal)
 
    for (let i = 0; i < array.length; i++) {
       if (maiorNumero < array[i]) {
+         segundoMaiorNumero = maiorNumero
          maiorNumero = array[i]
-      } else if ( maiorNumero > array[i] && segundoMaiorNumero < array[i]) {
-         segundoMaiorNumero = array[i]
+         console.log(maiorNumero)
       }
       if (menorNumero > array[i]) {
+         segundoMenorNumero = menorNumero
          menorNumero = array[i]
       } else if (segundoMenorNumero > array[i] && menorNumero < array[i]) {
          segundoMenorNumero = array[i]
       }
    }
-    arrayFinal = [segundoMaiorNumero, segundoMenorNumero]
-   console.log(arrayFinal)
+
+   arrayFinal = [segundoMaiorNumero, segundoMenorNumero]
    return arrayFinal
+
 }
 
 segundoMaiorEMenor([13, 12, 41, 15, 10, 16, 23, 8, 0])
