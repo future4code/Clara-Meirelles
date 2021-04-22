@@ -295,9 +295,9 @@ function maioresDe18(arrayDePessoas) {
 // Exercício 16, letra B
 
 function menoresDe18(arrayDePessoas) {
-   
+
    const arrayCriancas = []
-   
+
    for (i = 0; i < arrayDePessoas.length; i++) {
 
       if (arrayDePessoas[i].idade < 18) {
@@ -310,7 +310,11 @@ function menoresDe18(arrayDePessoas) {
 // Exercício 17, letra A
 
 function multiplicaArrayPor2(array) {
-   // implemente sua lógica aqui
+   arrayDobro = []
+   for (let i = 0; i < array.length; i++) {
+      arrayDobro.push(array[i]*2)
+   }
+   return arrayDobro
 }
 
 // Exercício 17, letra B
