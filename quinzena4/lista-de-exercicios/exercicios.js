@@ -370,8 +370,16 @@ function retornaPessoasAutorizadas() {
 
 // Exercício 18, letra B
 
-function retornaPessoasNaoAutorizadas(pessoas) {
-   // implemente sua lógica aqui
+function retornaPessoasNaoAutorizadas() {
+   const arrayVetadas = []
+
+   for (pessoa of pessoas){
+      if (pessoa.altura < 1.5 || pessoa.idade <= 14 || pessoa.idade >= 60){
+         arrayVetadas.push(pessoa)
+      }
+   }
+   
+   return arrayVetadas
 }
 
 //Exercício 19
