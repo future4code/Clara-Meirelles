@@ -312,7 +312,7 @@ function menoresDe18(arrayDePessoas) {
 function multiplicaArrayPor2(array) {
    arrayDobro = []
    for (let i = 0; i < array.length; i++) {
-      arrayDobro.push(array[i]*2)
+      arrayDobro.push(array[i] * 2)
    }
    return arrayDobro
 }
@@ -320,7 +320,14 @@ function multiplicaArrayPor2(array) {
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
-   // implemente sua lógica aqui
+
+   const arrayString = []
+
+   for (let i = 0; i < array.length; i++) {
+      arrayString.push(String(array[i] * 2))
+   }
+
+   return arrayString
 }
 
 // Exercício 17, letra C
