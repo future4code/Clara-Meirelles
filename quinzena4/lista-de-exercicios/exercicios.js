@@ -233,30 +233,41 @@ function imprimeChamada() {
 
    }
 
-   return`Venha assistir ao filme ${astrodevAwards.nome}, de ${astrodevAwards.ano}, dirigido por ${astrodevAwards.diretor} e estrelado por ${astrodevAwards.atores[0]}, ${astrodevAwards.atores[1]}, ${astrodevAwards.atores[2]}, ${astrodevAwards.atores[3]}.`
+   return `Venha assistir ao filme ${astrodevAwards.nome}, de ${astrodevAwards.ano}, dirigido por ${astrodevAwards.diretor} e estrelado por ${astrodevAwards.atores[0]}, ${astrodevAwards.atores[1]}, ${astrodevAwards.atores[2]}, ${astrodevAwards.atores[3]}.`
 
 }
 
 // Exercício 14
 
 function criaRetangulo(lado1, lado2) {
-  
+
    let retangulo = {
       largura: lado1,
       altura: lado2,
-      perimetro: (2*(lado1+lado2)),
-      area: lado1*lado2
+      perimetro: (2 * (lado1 + lado2)),
+      area: lado1 * lado2
    }
 
-return retangulo
+   return retangulo
 
 }
 
 // Exercício 15
 
 function anonimizaPessoa(pessoa) {
-   // implemente sua lógica aqui
+
+   const pessoaAnonima = {
+      nome: "Astrodev" ,
+      idade: 25,
+      email: "astrodev@future4.com.br",
+      endereco: "Rua do Futuro, 4"
+   }
+
+   pessoaAnonima.nome = "ANÔNIMO"
+   return pessoaAnonima
 }
+// NÃO funciona com propriedades diferentes das dadas, somente pode-se alterar o nome, pois no return ele muda para anônimo.
+
 
 // Exercício 16
 
