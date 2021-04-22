@@ -333,7 +333,15 @@ function multiplicaArrayPor2S(array) {
 // Exercício 17, letra C
 
 function verificaParidade(array) {
-   // implemente sua lógica aqui
+   const arrayParOuImpar = []
+   for (let i = 0; i < array.length; i++) {
+      if (array[i] % 2 === 0){
+         arrayParOuImpar.push(`${array[i]} é par`)
+      } else {
+         arrayParOuImpar.push(`${array[i]} é ímpar`)
+      }
+   }
+   return arrayParOuImpar
 }
 
 // Exercício 18
