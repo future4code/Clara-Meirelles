@@ -357,8 +357,14 @@ const pessoas = [
 
 //Exercício 18, letra A
 
-function retornaPessoasAutorizadas(pessoas) {
-   // implemente sua lógica aqui
+function retornaPessoasAutorizadas() {
+   const arrayAutorizadas = []
+   for (pessoa of pessoas){
+      if (pessoa.altura >= 1.5 && pessoa.idade > 14 && pessoa.idade < 60){
+         arrayAutorizadas.push(pessoa)
+      }
+   }
+   return arrayAutorizadas
 }
 
 
