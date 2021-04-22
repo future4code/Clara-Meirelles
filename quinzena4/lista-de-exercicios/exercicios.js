@@ -283,8 +283,8 @@ function maioresDe18(arrayDePessoas) {
 
    const arrayAdultos = []
 
-   for (i = 0; i<arrayDePessoas.length; i++) {
-      
+   for (i = 0; i < arrayDePessoas.length; i++) {
+
       if (arrayDePessoas[i].idade >= 18) {
          arrayAdultos.push(arrayDePessoas[i])
       }
@@ -295,7 +295,16 @@ function maioresDe18(arrayDePessoas) {
 // Exercício 16, letra B
 
 function menoresDe18(arrayDePessoas) {
-   // implemente sua lógica aqui
+   
+   const arrayCriancas = []
+   
+   for (i = 0; i < arrayDePessoas.length; i++) {
+
+      if (arrayDePessoas[i].idade < 18) {
+         arrayCriancas.push(arrayDePessoas[i])
+      }
+   }
+   return arrayCriancas
 }
 
 // Exercício 17, letra A
