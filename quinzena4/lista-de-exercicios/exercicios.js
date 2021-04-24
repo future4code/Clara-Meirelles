@@ -414,7 +414,22 @@ const consultasData = [
 ]
 
 function ordenaPorData() {
+   consultasData.sort(function (a, b) {
+      const dataA = a.dataDaConsulta.split("/")
+      const dataB = b.dataDaConsulta.split("/")
 
+
+      const dataFinalA = new Date(+dataA[2], dataA[1] - 1, +dataA[0]);
+      const dataFinalB = new Date(+dataB[2], dataB[1] - 1, +dataB[0]);
+
+      if (dataFinalA < dataFinalB) {
+         return -1;
+      } else {
+         return true;
+      }
+   })
+
+   return consultasData
 }
 
 //Exercício 20
