@@ -382,7 +382,7 @@ function retornaPessoasNaoAutorizadas() {
    return arrayVetadas
 }
 
-//Exercício 19
+//Exercício 19, letra A
 
 const consultasNome = [
    { nome: "João", dataDaConsulta: "01/10/2021" },
@@ -401,8 +401,6 @@ function ordenaPorNome() {
       }
    })
 
-   consultasNome.sort()
-   console.log(consultasNome)
    return consultasNome
 }
 
@@ -431,13 +429,12 @@ const contas = [
 ]
 
 function atualizaSaldo() {
-   // implemente sua lógica aqui
 
-   for (cliente in contas){
+   for (cliente in contas) {
       for (let gasto = 0; gasto < contas[cliente].compras.length; gasto++) {
          contas[cliente].saldoTotal += - contas[cliente].compras[gasto]
       }
    }
-   console.log(contas)
+   // console.log(contas)
    return contas
 }
