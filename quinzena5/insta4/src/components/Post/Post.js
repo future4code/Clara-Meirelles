@@ -46,20 +46,25 @@ class Post extends React.Component {
     numeroCurtidas: 0,
     comentando: false,
     numeroComentarios: 0,
-    comentariosEnviados: "",
   }
 
   onClickCurtida = () => {
-    console.log('Curtiu!')
+    let contadorCurtidas
+
+    if (this.state.curtido) {
+      contadorCurtidas = this.state.numeroCurtidas - 1
+    } else {
+      contadorCurtidas = this.state.numeroCurtidas + 1
+    }
     this.setState({
-      curtido: true,
-      numeroCurtidas: this.state.numeroCurtidas + 1,
+      curtido: !this.state.curtido,
+      numeroCurtidas: contadorCurtidas
     })
   }
 
   onClickComentario = () => {
     this.setState({
-      comentando: !this.state.comentando,
+    comentando: !this.state.comentando,
     })
   }
 
@@ -67,7 +72,7 @@ class Post extends React.Component {
     this.setState({
       comentando: false,
       numeroComentarios: this.state.numeroComentarios + 1,
-      comentarios: "",
+      // comentarios: ""
     })
   }
 
@@ -107,8 +112,7 @@ class Post extends React.Component {
           valorContador={this.state.numeroComentarios}
         />
       </PostFooter>
-      {/* {componenteComentario} */}
-      <SecaoComentario />
+      {componenteComentario}
     </PostContainer>
   }
 }

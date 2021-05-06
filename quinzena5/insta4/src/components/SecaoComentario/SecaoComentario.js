@@ -15,27 +15,20 @@ const InputComentario = styled.input`
 export class SecaoComentario extends Component {
 	state = {
 		textoComentario: "",
-		arrayComentarios: [""],
 	}
 
 
 	onChangeComentario = (event) => {
+		console.log(event.target.value)
 		this.setState({ textoComentario: event.target.value })
-	}
-
-	criarArrayComentarios = () => {
-		this.setState(arrayComentarios.push({ textoComentario }))
 	}
 
 	render() {
 		return <CommentContainer>
-			<p>{arrayComentarios.map((comentario) => {
-				return <p>{comentario}</p>
-			})}</p>
 			<InputComentario
 				name={"input-comentario"}
 				placeholder={'Comentário'}
-				onChange={onChangeComentario}
+				onChange={this.onChangeComentario}
 				value={this.state.textoComentario}
 			/>
 			<button onClick={this.props.aoEnviarComentario}>Enviar</button>
@@ -43,33 +36,3 @@ export class SecaoComentario extends Component {
 		</CommentContainer>
 	}
 }
-/**
-
-import React, { useState } from 'react'
-
-function App() {
-  const [arrayMensagens, setArray] = useState([])
-  const [input, setInput] = useState("")
-
-  function adicionarMensagemNoArray() {
-	setArray([...arrayMensagens, { input, usuario }])
-	setInput("")
-  }
-
-  function stringState(e) {
-	setInput(e.target.value)
-  }
-
-
-  return (
-	<div className="App">
-	  {arrayMensagens.map((mensagem) => {
-		return <p>{mensagem.usuario} diz: {mensagem.input}</p>
-	  })}
-	  <button onClick={adicionarMensagemNoArray}>clique</button>
-	  <input type="text" value={input} onChange={stringState}></input>
-	  <input type="text" value={usuario} onChange={nomearUsuario}></input>
-	</div>
-  );
-}
- */
