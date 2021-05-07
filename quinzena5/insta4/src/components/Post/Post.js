@@ -8,6 +8,8 @@ import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 import { SecaoComentario } from '../SecaoComentario/SecaoComentario'
 
+import App from '../../App.js'
+
 const PostContainer = styled.div`
   border: 1px solid gray;
   width: 300px;
@@ -46,6 +48,7 @@ class Post extends React.Component {
     numeroCurtidas: 0,
     comentando: false,
     numeroComentarios: 0,
+    arrayComentarios: []
   }
 
   onClickCurtida = () => {
@@ -64,16 +67,18 @@ class Post extends React.Component {
 
   onClickComentario = () => {
     this.setState({
-    comentando: !this.state.comentando,
+      comentando: !this.state.comentando,
     })
   }
 
   aoEnviarComentario = () => {
+    const copiaArray = [...this.state.arrayComentarios]
+    console.log("funcionando")
     this.setState({
       comentando: false,
       numeroComentarios: this.state.numeroComentarios + 1,
-      // comentarios: ""
     })
+
   }
 
   render() {
@@ -91,9 +96,47 @@ class Post extends React.Component {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario} />
     }
 
+    const listaPosts = this.props.posts
+    console.log(listaPosts)
+    listaPosts.map((post, index) => {
+      return (
+        <Post key={index}>
+          <PostHeader>
+            <UserPhoto src={post.fotoUsuario} alt={'Imagem do usuario'} />
+            <p>{post.nomeUsuario}</p>
+          </PostHeader>
+          <PostPhoto src={post.fotoPost} alt={'Imagem do post'} />
+
+          <PostFooter>
+            <IconeComContador
+              icone={iconeCurtida}
+              onClickIcone={this.onClickCurtida}
+              valorContador={this.state.numeroCurtidas}
+            />
+
+            <IconeComContador
+              icone={iconeComentario}
+              onClickIcone={this.onClickComentario}
+              valorContador={this.state.numeroComentarios}
+            />
+          </PostFooter>
+          {componenteComentario}
+        </Post>
+      )
+    })
+
     return <PostContainer>
-      <PostHeader>
-        <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'} />
+      {listaPosts}
+      {componenteComentario}
+    </PostContainer>
+  }
+}
+
+export default Post
+
+/*
+<PostHeader>
+        <UserPhoto src={this.state.fotoUsuario} alt={'Imagem do usuario'} />
         <p>{this.props.nomeUsuario}</p>
       </PostHeader>
 
@@ -112,9 +155,4 @@ class Post extends React.Component {
           valorContador={this.state.numeroComentarios}
         />
       </PostFooter>
-      {componenteComentario}
-    </PostContainer>
-  }
-}
-
-export default Post
+*/
