@@ -8,12 +8,18 @@ width: fit-content;
 display: flex;
 justify-content: space-between;
 align-items: center;
+height: fit-content;
+border: 1px solid black;
+padding: 0 8%;
+margin: 0 auto;
 
 button{
     margin-left: 25px;
 }
 `
-
+const TelaDetalhes = styled.div`
+text-align: center;
+`
 export default class VerMaisDetalhes extends React.Component {
 
     state = {
@@ -41,22 +47,25 @@ export default class VerMaisDetalhes extends React.Component {
 
     render() {
         return (
-            <>
+            <TelaDetalhes>
+                <div>
                 <button onClick={this.props.acessaTelaNovoUsuario}>Adicionar novo Usuário</button>
                 <button onClick={this.props.voltarParaLista}>Voltar à lista de usuários</button>
                 <hr />
+                </div>
                 <h1>Detalhes do Cadastro</h1>
                 <CardUsuario>
                     <p>{this.state.usuario.name} - {this.state.usuario.email}</p>
                     <RemoverCadastro
                         id={this.state.usuario.id}
                         componentDidMount={this.componentDidMount}
+                        voltarParaLista={this.props.voltarParaLista}
                     />
                 </CardUsuario>
 
 
 
-            </>
+            </TelaDetalhes>
         )
     }
 }

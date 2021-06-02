@@ -9,8 +9,13 @@ export default class RemoverCadastro extends React.Component {
                     Authorization: 'clara-meirelles-munoz'
                 }
             }).then(() => {
-                this.props.componentDidMount()
                 alert("Cadastro deletado!")
+                if (this.props.voltarParaLista) {
+                    this.props.voltarParaLista()
+
+                }
+                this.props.componentDidMount()
+
             }).catch(() => {
                 alert("Erro ao remover cadastro.")
             })

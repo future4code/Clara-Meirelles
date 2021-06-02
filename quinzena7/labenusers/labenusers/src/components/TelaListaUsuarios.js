@@ -53,6 +53,7 @@ export default class TelaListaUsuarios extends React.Component {
         this.setState({
             verLista: true,
         })  
+        this.componentDidMount()
       }
 
     render() {
@@ -78,6 +79,7 @@ export default class TelaListaUsuarios extends React.Component {
                                 <RemoverCadastro
                                     id={usuario.id}
                                     componentDidMount={this.componentDidMount}
+                                    voltarParaLista = {this.voltarParaLista}
                                 />
                             </CardLista>
                         })}
