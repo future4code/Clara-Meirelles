@@ -1,47 +1,32 @@
 import React, { useState, useEffect } from 'react'
-import Like from '../img/like.svg'
-import Dislike from '../img/dislike.svg'
-import styled from 'styled-components'
+import Like from '../../img/like.svg'
+import Dislike from '../../img/dislike.svg'
 import axios from 'axios'
-import { data_Url } from './data-url.js'
-
-const FooterContainer = styled.footer`
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-    img{
-        height: 9vh;
-    }
-
-    img:hover{
-        height: 10vh;
-    }
-`
+import { data_Url } from '../../constants/data-url.js'
+import { FooterContainer } from './styled.js'
 
 export default function Footer(props) {
     const [like, setLike] = useState(null)
+
     useEffect(() => {
+
         const body = {
             id: props.id,
             choice: like
         }
-        console.log("Body", body)
+
         axios.post(`${data_Url}/choose-person`, body, {})
-            .then((resposta) => {
-                console.log("Resposta", resposta)
-            }).catch((erro) => {
-                console.log("Erro", erro.data)
+            .then(() => {
+                setLike(null)
+            }).catch(() => {
+                alert('Ocorreu um erro inesperado! Atualize a página ou tente novamente mais tarde.')
             })
-        setLike(null)
 
     }, [like])
 
     const darLike = () => {
-        console.log("dar Like ")
         setLike(true)
         props.curtirPerfil()
-
     }
 
     const darDislike = () => {

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import GlobalStyle from './GlobalStyle.js'
-import CardEscolha from './pages/CardEscolha.js'
-import TelaMatches from './pages/TelaMatches.js'
-import Header from './components/Header.js'
-import Footer from './components/Footer.js'
+import CardEscolha from './components/CardEscolha/CardEscolha.js'
+import TelaMatches from './pages/TelaMatches/TelaMatches.js'
+import Header from './components/Header/Header.js'
+import Footer from './components/Footer/Footer.js'
 import { FundoPagina, AstroMatch } from './styled.js'
-import { data_Url } from './components/data-url'
+import { data_Url } from './constants/data-url'
 
 export default function App() {
 
@@ -16,13 +16,13 @@ export default function App() {
   const [perfisNovos, setPerfisNovos] = useState(true)
   const [like, setLike] = useState(null)
 
-  console.log(perfil)
   useEffect(() => {
     if (perfisNovos) {
       axios.get(`${data_Url}/person`)
         .then((resposta) => {
           setPerfil(resposta.data.profile)
-        }).catch(() => {
+        }).catch((erro) => {
+          console.log(erro.data)
           window.confirm("Acabaram os perfis, deseja reiniciar?")
           if (window.confirm) {
             reiniciarApp()
@@ -35,6 +35,10 @@ export default function App() {
   }, [proximo]
   )
 
+  const proximoPerfil = () => {
+    setProximo(proximo + 1)
+  }
+  
   const curtirPerfil = () => {
     proximoPerfil()
     setLike(true)
@@ -43,10 +47,6 @@ export default function App() {
   const descurtirPerfil = () => {
     proximoPerfil()
     setLike(false)
-  }
-
-  const proximoPerfil = () => {
-    setProximo(proximo + 1)
   }
 
   const trocaTela = () => {
@@ -63,11 +63,11 @@ export default function App() {
     <FundoPagina>
       <GlobalStyle />
       <AstroMatch>
-        <Header trocaTela={trocaTela} 
-        tela={tela}/>
+        <Header trocaTela={trocaTela}
+          tela={tela} />
         {(tela === "card escolha" && perfil) ?
           <>
-            <CardEscolha perfil={perfil} like={like}/>
+            <CardEscolha perfil={perfil} like={like} />
             <Footer curtirPerfil={curtirPerfil} descurtirPerfil={descurtirPerfil} id={perfil.id} tela={tela} />
           </> :
           <TelaMatches />
