@@ -1,9 +1,12 @@
-import PaginaPrincipal from './pages/PaginaPrincipal.js'
+// import PaginaPrincipal from './pages/PaginaPrincipal.js'
+import { GlobalStyle } from './GlobalStyle.js'
+import { Router } from './route/Router.js'
 
 function App() {
   return (
-    <div className="App">
-      <PaginaPrincipal />
+    <div>
+      <GlobalStyle />
+      <Router />
     </div>
   );
 }

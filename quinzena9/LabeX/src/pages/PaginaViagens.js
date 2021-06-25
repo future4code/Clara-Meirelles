@@ -1,27 +1,25 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import { useGetData } from '../constants/api-data'
+import Header from "../components/Header";
 
 export default function PaginaViagens() {
-  const [viagens, setViagens] = useState([])
+  const [viagens, setViagens] = useState()
+  const recebeViagens = useGetData('trips')
   useEffect(() => {
-    axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/clara-meirelles-munoz/trips')
-      .then((resposta) => {
-        setViagens(resposta.data.trips)
-      })
-  }, []
-  )
-
-  console.log(viagens)
+    {recebeViagens && setViagens(recebeViagens.trips)}
+  }, [recebeViagens])
   return (
-    <div>
-      Página Viagens
-      {viagens.map((viagem) => {
-        <>
-        <h3>{viagem.name}</h3>
-        <p>{viagem.planet} </p>
-        <p>{viagem.description} </p>
-        </>
+    <>
+    <Header />
+      <h1>Viagens disponíveis:</h1>
+      {viagens && viagens.map((viagem) => {
+        return (<div key={viagem.id}>
+          <h3>{viagem.name}</h3>
+          <h4>{viagem.planet} </h4>
+          <p>{viagem.description} </p>
+        </div>)
       })}
-    </div>
-  );
+    </>
+)
+
 }
