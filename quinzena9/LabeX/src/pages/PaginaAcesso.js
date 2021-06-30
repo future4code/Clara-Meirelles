@@ -5,18 +5,19 @@ import { useHistory } from 'react-router-dom'
 
 export default function PaginaAcesso() {
 
-  const [valorLogin, onChangeLogin] = useInputControlado()
+  const [valorEmail, onChangeEmail] = useInputControlado()
   const [valorSenha, onChangeSenha] = useInputControlado()
   const history = useHistory()
 
   const onClickEntrar = () => {
     const body = {
-      email: valorLogin,
+      email: valorEmail,
       password: valorSenha
     }
     axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/clara-meirelles-munoz/login', body)
     .then((resposta) => {
       console.log('token', resposta.data.token)
+      localStorage.setItem('token', resposta.data.token)
       history.replace('/pagina-admin')
     })
     .catch((erro) =>{
@@ -28,8 +29,8 @@ export default function PaginaAcesso() {
     <div>
       <Header/>
       <h1>Página Acesso</h1>
-      <input value={valorLogin} onChange={onChangeLogin} placeholder={"Nome ou e-mail de login"} />
-      <input value={valorSenha} onChange={onChangeSenha} placeholder={"Senha"} />
+      <input type='email' value={valorEmail} onChange={onChangeEmail} placeholder={"E-mail de login"} />
+      <input type='password' value={valorSenha} onChange={onChangeSenha} placeholder={"Senha"} />
       <button onClick={onClickEntrar}>Entrar</button>
     </div>
   );
