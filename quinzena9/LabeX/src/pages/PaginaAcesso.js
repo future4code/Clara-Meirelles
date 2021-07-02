@@ -1,37 +1,54 @@
-import { useInputControlado } from '../constants/input-controlado.js'
 import Header from '../components/Header.js'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
+import { useForm } from '../constants/useForm.js'
 
 export default function PaginaAcesso() {
 
-  const [valorEmail, onChangeEmail] = useInputControlado()
-  const [valorSenha, onChangeSenha] = useInputControlado()
   const history = useHistory()
 
-  const onClickEntrar = () => {
-    const body = {
-      email: valorEmail,
-      password: valorSenha
-    }
-    axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/clara-meirelles-munoz/login', body)
-    .then((resposta) => {
-      console.log('token', resposta.data.token)
-      localStorage.setItem('token', resposta.data.token)
-      history.replace('/pagina-admin')
-    })
-    .catch((erro) =>{
-       console.log('erro', erro)
-      window.alert('usuário ou senha incorretos, tente novamente')})
+  const { form, onChangeForm} = useForm({
+    email: '',
+    password: ''
+  })
+
+  const onClickEntrar = (event) => {
+    event.preventDefault()
+    axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/clara-meirelles-munoz/login', form)
+      .then((resposta) => {
+        localStorage.setItem('token', resposta.data.token)
+        history.replace('/pagina-admin')
+      })
+      .catch((erro) => {
+        console.log('erro', erro)
+        window.alert('usuário ou senha incorretos, tente novamente')
+      })
   }
 
   return (
     <div>
-      <Header/>
+      <Header />
       <h1>Página Acesso</h1>
-      <input type='email' value={valorEmail} onChange={onChangeEmail} placeholder={"E-mail de login"} />
-      <input type='password' value={valorSenha} onChange={onChangeSenha} placeholder={"Senha"} />
-      <button onClick={onClickEntrar}>Entrar</button>
+      <form onSubmit={onClickEntrar}>
+        <input
+          name='email'
+          type='email'
+          value={form.email}
+          onChange={onChangeForm}
+          placeholder={"E-mail de login"}
+          required
+        />
+        <input
+          name='password'
+          type='password'
+          value={form.password}
+          onChange={onChangeForm}
+          placeholder={"Senha"}
+          required
+        />
+        <button>Entrar</button>
+      </form>
+
     </div>
   );
 }

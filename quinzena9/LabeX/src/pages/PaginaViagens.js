@@ -4,9 +4,7 @@ import Header from "../components/Header";
 import { useHistory } from "react-router";
 
 import styled from "styled-components";
-
-
-
+//criar estilização das viagens
 
 export default function PaginaViagens() {
   const [viagens, setViagens] = useState()
@@ -15,7 +13,6 @@ export default function PaginaViagens() {
   useEffect(() => {
     { recebeViagens && setViagens(recebeViagens.trips) }
   }, [recebeViagens])
-  console.log(viagens)
 
   const botaoViagens = (id) => {
     const token = localStorage.getItem('token')
@@ -43,7 +40,6 @@ export default function PaginaViagens() {
           <h3>{viagem.name}</h3>
           <h4>{viagem.planet} </h4>
           <p>{viagem.description} </p>
-          <p>{viagem.id}</p>
           {botaoViagens(viagem.id)}
         </div>)
       })}

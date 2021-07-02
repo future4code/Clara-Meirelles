@@ -1,4 +1,4 @@
-import { Route, Switch, BrowserRouter, useParams } from 'react-router-dom'
+import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import PaginaPrincipal from '../pages/PaginaPrincipal.js'
 import PaginaViagens from '../pages/PaginaViagens.js'
 import PaginaInscricaoViagem from '../pages/PaginaInscricaoViagem'
@@ -6,8 +6,6 @@ import PaginaAcesso from '../pages/PaginaAcesso.js'
 import PaginaCriarViagem from '../pages/PaginaCriarViagem.js'
 import PaginaAdmin from '../pages/PaginaAdmin.js'
 import PaginaDetalhesViagem from '../pages/PaginaDetalhesViagem.js'
-import { useGetData } from '../constants/api-data.js'
-import { useEffect, useState } from 'react'
 
 
 export function Router() {
