@@ -1,19 +1,25 @@
 import { useHistory } from "react-router-dom"
-import Header from "../components/Header"
+import Header from "../components/Header/Header.js"
 import { useAutenticacaoDeUsuario } from "../constants/useAutenticacaoUsuario"
+import { DisplayBotoesGrandes, BotaoGrande, CorpoPagina, FonteLabeX } from "../components/styled.js"
 
 export default function PaginaAdmin() {
     const history = useHistory()
 
     useAutenticacaoDeUsuario()
-    const onclickAreaCriarViagens = () => {
-        history.push('/criar-viagem')
+
+    const onClickMudaPagina = (path) => {
+        history.push(path)
     }
+
     return (
-        <>
+        <CorpoPagina>
             <Header />
-            <h1>Olá!</h1>
-            <button onClick={onclickAreaCriarViagens}>Criar Nova Viagem</button>
-        </>
-                )
+            <FonteLabeX>LabeX</FonteLabeX>
+            <DisplayBotoesGrandes>
+            <BotaoGrande onClick={() => onClickMudaPagina('/criar-viagem')}><h2>Criar Nova <br />Viagem</h2></BotaoGrande>
+            <BotaoGrande onClick={() => onClickMudaPagina('/viagens')}><h2>Ver <br /> Viagens</h2></BotaoGrande>
+            </DisplayBotoesGrandes>
+        </CorpoPagina>
+    )
 }

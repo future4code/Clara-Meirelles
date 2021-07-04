@@ -1,12 +1,13 @@
-import Header from '../components/Header.js'
+import Header from '../components/Header/Header.js'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
 import { useForm } from '../constants/useForm.js'
+import { CorpoPagina, Formulario, Botao } from '../components/styled.js'
+import { api_url } from '../constants/api-data.js'
 
 export default function PaginaAcesso() {
 
   const history = useHistory()
-
   const { form, onChangeForm} = useForm({
     email: '',
     password: ''
@@ -14,7 +15,7 @@ export default function PaginaAcesso() {
 
   const onClickEntrar = (event) => {
     event.preventDefault()
-    axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/clara-meirelles-munoz/login', form)
+    axios.post(`${api_url}/login`, form)
       .then((resposta) => {
         localStorage.setItem('token', resposta.data.token)
         history.replace('/pagina-admin')
@@ -26,10 +27,10 @@ export default function PaginaAcesso() {
   }
 
   return (
-    <div>
+    <CorpoPagina>
       <Header />
       <h1>Página Acesso</h1>
-      <form onSubmit={onClickEntrar}>
+      <Formulario  onSubmit={onClickEntrar}>
         <input
           name='email'
           type='email'
@@ -46,9 +47,9 @@ export default function PaginaAcesso() {
           placeholder={"Senha"}
           required
         />
-        <button>Entrar</button>
-      </form>
+        <Botao>Entrar</Botao>
+      </Formulario>
 
-    </div>
+    </CorpoPagina>
   );
 }

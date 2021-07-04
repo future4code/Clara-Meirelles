@@ -1,25 +1,9 @@
 import { useForm } from "../constants/useForm";
-import styled from "styled-components";
 import axios from "axios";
-import Header from '../components/Header.js'
+import Header from '../components/Header/Header.js'
 import { useAutenticacaoDeUsuario } from "../constants/useAutenticacaoUsuario";
-
-const Formulario = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-
-    input, select{
-        width: 50vw;
-        height: 48px;
-        margin-bottom: 8px;
-        border-radius:  16px;
-    }
-`
-
+import { api_url } from "../constants/api-data";
+import { Formulario, CorpoPagina } from "../components/styled";
 
 export default function CriarViagem() {
     const { form, onChangeForm, limpaFormulario } = useForm({
@@ -36,7 +20,7 @@ export default function CriarViagem() {
         event.preventDefault()
         const body = form
         const token = localStorage.getItem('token')
-        axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/clara-meirelles-munoz/trips', body, {
+        axios.post(`${api_url}/trips`, body, {
             headers: {
                 auth: token
             }
@@ -48,11 +32,10 @@ export default function CriarViagem() {
     }
 
     return (
-        <>
+        <CorpoPagina>
             <Header />
-            <Formulario>
                 <h1>Criar Viagem</h1>
-                <form onSubmit={onClickEnviar}>
+                <Formulario onSubmit={onClickEnviar}>
                     <input
                         name='name'
                         value={form.name}
@@ -111,9 +94,7 @@ export default function CriarViagem() {
                     />
 
                     <button>Enviar</button>
-                </form>
-
-            </Formulario>
-        </>
+                </Formulario>
+        </CorpoPagina>
     );
 }

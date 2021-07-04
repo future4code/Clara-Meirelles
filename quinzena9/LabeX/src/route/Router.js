@@ -1,5 +1,5 @@
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
-import PaginaPrincipal from '../pages/PaginaPrincipal.js'
+import PaginaPrincipal from '../pages/PaginaPrincipal/PaginaPrincipal.js'
 import PaginaViagens from '../pages/PaginaViagens.js'
 import PaginaInscricaoViagem from '../pages/PaginaInscricaoViagem'
 import PaginaAcesso from '../pages/PaginaAcesso.js'
@@ -19,7 +19,7 @@ export function Router() {
                 <Route exact path={"/viagens"}>
                     <PaginaViagens />
                 </Route>
-                <Route exact path={'/inscricao-viagem/:id'}>
+                <Route exact path={'/inscricao-viagem/:titulo/:id'}>
                     <PaginaInscricaoViagem/>
                 </Route>
                 <Route exact path={"/login"}>
@@ -31,7 +31,7 @@ export function Router() {
                 <Route exact path={"/criar-viagem"}>
                     <PaginaCriarViagem />
                 </Route>
-                <Route exact path={'/detalhes-viagem/:id'}>
+                <Route exact path={'/detalhes-viagem/:titulo/:id'}>
                     <PaginaDetalhesViagem/>
                 </Route>
             </Switch>
