@@ -16,7 +16,7 @@ export default function CriarViagem() {
 
     useAutenticacaoDeUsuario()
 
-    const onClickEnviar = (event) => {
+    const criarViagem = (event) => {
         event.preventDefault()
         const body = form
         const token = localStorage.getItem('token')
@@ -28,73 +28,75 @@ export default function CriarViagem() {
             .then(() => {
                 limpaFormulario()
             })
-            .catch((erro) => console.log('não foi', erro))
+            .catch((erro) => {
+                window.alert('Um erro ocorreu!', erro)
+            })
+
     }
 
     return (
         <CorpoPagina>
             <Header />
-                <h1>Criar Viagem</h1>
-                <Formulario onSubmit={onClickEnviar}>
-                    <input
-                        name='name'
-                        value={form.name}
-                        onChange={onChangeForm}
-                        placeholder={"Titulo da Viagem"}
-                        pattern='[A-Z a-z]{5,}'
-                        title={'O título da viagem deve ter ao menos 5 caracteres'}
-                        required
-                    />
+            <h1>Criar Viagem</h1>
+            <Formulario onSubmit={criarViagem}>
+                <input
+                    name='name'
+                    value={form.name}
+                    onChange={onChangeForm}
+                    placeholder={"Titulo da Viagem"}
+                    pattern='[A-Z a-z áàâãéèêíïóôõöúçñ]{5,}'
+                    title={'O título da viagem deve ter ao menos 5 caracteres'}
+                    required
+                />
+                <select name='planet'
+                    value={form.planet}
+                    onChange={onChangeForm}
+                    placeholder={"Planeta"}
+                    required
+                >
+                    <option>Selecione um Planeta</option>
+                    <option value={'Júpiter'}>Júpiter</option>
+                    <option value={'Marte'}>Marte</option>
+                    <option value={'Mercúrio'}>Mercúrio</option>
+                    <option value={'Netuno'}>Netuno</option>
+                    <option value={'Plutão'}>Plutão</option>
+                    <option value={'Saturno'}>Saturno</option>
+                    <option value={'Terra'}>Terra</option>
+                    <option value={'Urano'}>Urano</option>
+                    <option value={'Vênus'}>Vênus</option>
+                </select>
 
-                    <select name='planet'
-                        value={form.planet}
-                        onChange={onChangeForm}
-                        placeholder={"Planeta"}
-                        required
-                    >
-                        <option value={''}>Selecione um Planeta</option>
-                        <option value={'Júpiter'}>Júpiter</option>
-                        <option value={'Marte'}>Marte</option>
-                        <option value={'Mercúrio'}>Mercúrio</option>
-                        <option value={'Netuno'}>Netuno</option>
-                        <option value={'Plutão'}>Plutão</option>
-                        <option value={'Saturno'}>Saturno</option>
-                        <option value={'Terra'}>Terra</option>
-                        <option value={'Urano'}>Urano</option>
-                        <option value={'Vênus'}>Vênus</option>
-                    </select>
+                <input
+                    name='date'
+                    type="date"
+                    value={form.date}
+                    onChange={onChangeForm}
+                    min={Date.now()}
 
-                    <input
-                        name='date'
-                        type="date"
-                        value={form.date}
-                        onChange={onChangeForm}
-                        min={Date.now()}
+                    required
+                />
 
-                        required
-                    />
+                <input
+                    name='description'
+                    value={form.description}
+                    onChange={onChangeForm}
+                    placeholder={'Descrição'}
+                    required
+                />
 
-                    <input
-                        name='description'
-                        value={form.description}
-                        onChange={onChangeForm}
-                        placeholder={'Descrição'}
-                        required
-                    />
+                <input
+                    name='durationInDays'
+                    type='number'
+                    value={form.durationInDays}
+                    onChange={onChangeForm}
+                    placeholder={'Duração em dias'}
+                    min={50}
+                    title={'A viagem deve durar ao menos 50 dias'}
+                    required
+                />
 
-                    <input
-                        name='durationInDays'
-                        type='number'
-                        value={form.durationInDays}
-                        onChange={onChangeForm}
-                        placeholder={'Duração em dias'}
-                        min={50}
-                        title={'A viagem deve durar ao menos 50 dias'}
-                        required
-                    />
-
-                    <button>Enviar</button>
-                </Formulario>
+                <button>Enviar</button>
+            </Formulario>
         </CorpoPagina>
     );
 }

@@ -6,43 +6,33 @@ import { useAutenticacaoDeUsuario } from "../constants/useAutenticacaoUsuario";
 import { api_url, useGetData } from "../constants/api-data";
 import { Botao, CardViagem, CorpoPagina } from "../components/styled";
 
-import styled from "styled-components";
-
-const HeaderDetalhesViagem = styled.header`
-width: 100%;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-`
-
 export default function PaginaDetalhesViagem() {
     useAutenticacaoDeUsuario()
 
     const pathParams = useParams()
     const history = useHistory()
     const token = localStorage.getItem('token')
-    const [dados, erro] = useGetData(`/trip/${pathParams.id}`)
+    const [dados, recebeDados] = useGetData(`/trip/${pathParams.id}`)
     const [viagem, setViagem] = useState()
+    const [id, setId] = useState()
 
     useEffect(() => {
-        {
-            dados ?
-                setViagem(dados.trip) :
-                console.log(erro)
-        }
-    }, [dados])
+        { dados && setViagem(dados.trip) }
+    }, [dados, id])
 
-    const aprovarCandidato = (id, approve) => {
+    const aprovarCandidato = (idCandidato, approve) => {
         const body = { approve: approve }
 
-        axios.put(`${api_url}/trips/${pathParams.id}/candidates/${id}/decide`, body, {
+        axios.put(`${api_url}/trips/${pathParams.id}/candidates/${idCandidato}/decide`, body, {
             headers: {
                 auth: token
             }
+        }).then(() => {
+            setId(idCandidato)
+            recebeDados()
+        }).catch((erro) => {
+            window.alert('Ocorreu um erro, atualize a página ou tente novamente mais tarde', erro)
         })
-            .then(() => {
-            })
-            .catch((erro) => console.log(erro))
     }
 
     const deletarViagem = () => {
@@ -53,13 +43,12 @@ export default function PaginaDetalhesViagem() {
         }).then(() => {
             history.push('/viagens')
         }).catch((erro) => console.log(erro))
-
     }
 
     return (
         <CorpoPagina>
             <Header />
-            <p>Detalhes da viagem</p>
+            <h3>Detalhes da viagem</h3>
             {viagem &&
                 <div>
                     <CardViagem>
@@ -78,7 +67,11 @@ export default function PaginaDetalhesViagem() {
                                 <h3>Candidatos aprovados</h3>
                             </header>
                             {viagem.approved.map((candidato) => {
-                                return <p key={candidato.id}>{candidato.name}, {candidato.age}, {candidato.profession}, {candidato.country}</p>
+                                return (
+                                    <p key={candidato.id}>
+                                        {candidato.name}, {candidato.age}, {candidato.profession}, {candidato.country}
+                                    </p>
+                                )
                             })}
                         </CardViagem>
                     }
@@ -93,8 +86,8 @@ export default function PaginaDetalhesViagem() {
                                         <h3>{candidato.name}, {candidato.age} </h3>
                                         <p>{candidato.profession}, {candidato.country}</p>
                                         <p>{candidato.applicationText}</p>
-                                        <button onClick={() => aprovarCandidato(candidato.id, true)} > Aprovar</button>
-                                        <button onClick={() => aprovarCandidato(candidato.id, false)} > Não Aprovado</button>
+                                        <Botao onClick={() => aprovarCandidato(candidato.id, true)} > Aprovar</Botao>
+                                        <Botao onClick={() => aprovarCandidato(candidato.id, false)} > Não Aprovado</Botao>
                                     </div>
 
                                 )

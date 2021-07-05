@@ -21,7 +21,6 @@ export const Formulario = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     width: 100vw;
     margin: 0 auto;
     padding: 0 auto;
@@ -82,6 +81,7 @@ export const CardViagem = styled.article`
   }
 `
 
+
 export const BotaoGrande = styled.button`
   background-color: rgba(154, 131, 219, 1);
   border-color: rgba(145, 122, 210, 1);
@@ -90,15 +90,12 @@ export const BotaoGrande = styled.button`
   height: 30vh;
   width: 20vw;
 
-  
-
   :hover{
     background-color: rgb(175 150 247);
     :active{
       background-color: rgb(136 116 194);
     }
   }
-  
 `
 export const DisplayBotoesGrandes = styled.nav`
   display: grid;
@@ -116,4 +113,27 @@ export const FonteLabeX = styled.h1`
   background: -webkit-linear-gradient(45deg, rgb(105 89 148), rgba(187, 140, 209, 1));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+`
+
+export const LayoutLogin = styled.div`
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background-color: rgba(154, 131, 219, 1);
+  height: 25vh;
+  width: 22vw;
+  color: white;
+  border-radius: 16px;
+
+  input{
+    border-radius: 20px;
+    width: 16vw;
+    margin-left: 2vw;
+  }
+
+  button{
+    display: block;
+    margin-left: 2vw;
+    margin-top: 1vh;
+  }
 `

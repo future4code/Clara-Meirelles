@@ -1,6 +1,6 @@
-import Header from '../../components/Header/Header.js'
+import Header from '../components/Header/Header.js'
 import { useHistory } from 'react-router-dom'
-import { BotaoGrande, CorpoPagina, DisplayBotoesGrandes, FonteLabeX } from '../../components/styled.js'
+import { BotaoGrande, CorpoPagina, DisplayBotoesGrandes, FonteLabeX } from '../components/styled.js'
 
 
 export default function PaginaPrincipal() {

@@ -5,7 +5,6 @@ export const api_url = 'https://us-central1-labenu-apis.cloudfunctions.net/labeX
 
 export function useGetData(path) {
     const [dados, setDados] = useState()
-    const [erro, setErro] = useState()
     const token = localStorage.getItem('token')
 
     const recebeDados = () => {
@@ -15,16 +14,18 @@ export function useGetData(path) {
             }
         })
             .then((resposta) => {
-                setDados(resposta.data);
+                if (resposta.data !== dados) {
+                    setDados(resposta.data);
+                }
             })
             .catch((erro) => {
-                setErro(erro)
                 console.log(erro)
             });
     }
 
     useEffect(() => {
         recebeDados()
-    }, [dados])
-    return [dados, erro];
+    }, [])
+
+    return [dados, recebeDados];
 }

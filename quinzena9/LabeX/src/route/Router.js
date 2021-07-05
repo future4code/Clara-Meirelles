@@ -1,5 +1,5 @@
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
-import PaginaPrincipal from '../pages/PaginaPrincipal/PaginaPrincipal.js'
+import PaginaPrincipal from '../pages/PaginaPrincipal.js'
 import PaginaViagens from '../pages/PaginaViagens.js'
 import PaginaInscricaoViagem from '../pages/PaginaInscricaoViagem'
 import PaginaAcesso from '../pages/PaginaAcesso.js'

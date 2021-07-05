@@ -15,7 +15,10 @@ export default function PaginaAdmin() {
     return (
         <CorpoPagina>
             <Header />
+            <div>
             <FonteLabeX>LabeX</FonteLabeX>
+            <h3>Edite ou crie viagens</h3>
+            </div>
             <DisplayBotoesGrandes>
             <BotaoGrande onClick={() => onClickMudaPagina('/criar-viagem')}><h2>Criar Nova <br />Viagem</h2></BotaoGrande>
             <BotaoGrande onClick={() => onClickMudaPagina('/viagens')}><h2>Ver <br /> Viagens</h2></BotaoGrande>

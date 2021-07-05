@@ -2,39 +2,7 @@ import { useState, useEffect } from "react";
 import { useGetData } from '../constants/api-data'
 import Header from "../components/Header/Header.js";
 import { useHistory } from "react-router";
-import { CorpoPagina, Botao } from "../components/styled";
-
-import styled from "styled-components";
-
-const CardViagem = styled.article`
-  justify-self: center;
-  min-height: 35vh;
-  height: fit-content;
-  width: 40vw;
-  margin: 3%;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  border: 3px solid rgba(187, 140, 209, 1);
-
-  header{
-    background-color: rgba(187, 140, 209, 1);
-    color: white;
-    height: 100%;
-    
-    h3{
-      text-align: center;
-      align-self: center;
-    }
-  }
-
-  p{
-    margin-left: 16px;
-    :nth-child(3){
-      flex-grow:1;
-    }
-  }
-`
+import { CorpoPagina, Botao, CardViagem } from "../components/styled";
 
 export default function PaginaViagens() {
   const [viagens, setViagens] = useState()
